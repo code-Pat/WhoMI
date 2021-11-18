@@ -84,9 +84,9 @@
 		6B7739F227429A3E0048B511 /* WhoMI_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				6B773A2A274634FB0048B511 /* Models */,
 				6B773A29274633E40048B511 /* Cells */,
 				6B773A27274633C30048B511 /* Extension */,
-				6B773A23274624760048B511 /* OnboardingSlide.swift */,
 				6B773A1C27452D0A0048B511 /* Storyboard */,
 				6B773A1B27452BE30048B511 /* ViewControllers */,
 				6B7739F327429A3E0048B511 /* AppDelegate.swift */,
@@ -139,6 +139,14 @@
 				6B773A25274626340048B511 /* OnboardingCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		6B773A2A274634FB0048B511 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6B773A23274624760048B511 /* OnboardingSlide.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
