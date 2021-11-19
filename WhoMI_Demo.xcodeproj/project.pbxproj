@@ -27,6 +27,7 @@
 		6B773A222746239A0048B511 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A212746239A0048B511 /* UIView+Extension.swift */; };
 		6B773A24274624770048B511 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A23274624760048B511 /* OnboardingSlide.swift */; };
 		6B773A26274626340048B511 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A25274626340048B511 /* OnboardingCell.swift */; };
+		6BF9EBCC27476E7C00629858 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF9EBCB27476E7C00629858 /* EntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		6B773A212746239A0048B511 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		6B773A23274624760048B511 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		6B773A25274626340048B511 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		6BF9EBCB27476E7C00629858 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				6B773A1527452BC70048B511 /* DeleteAccountViewController.swift */,
 				6B773A1727452BD20048B511 /* ResetPWViewController.swift */,
 				6B773A1927452BDF0048B511 /* ChangePNViewController.swift */,
+				6BF9EBCB27476E7C00629858 /* EntryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				6B773A0E27452B710048B511 /* OnboardingViewController.swift in Sources */,
 				6B773A1227452BA40048B511 /* PersonalProfileViewController.swift in Sources */,
 				6B773A222746239A0048B511 /* UIView+Extension.swift in Sources */,
+				6BF9EBCC27476E7C00629858 /* EntryViewController.swift in Sources */,
 				6B773A24274624770048B511 /* OnboardingSlide.swift in Sources */,
 				6B773A0C27452B590048B511 /* PersonalViewController.swift in Sources */,
 				6B773A1027452B8E0048B511 /* ProfileCellViewController.swift in Sources */,
