@@ -28,9 +28,13 @@
 		6B773A24274624770048B511 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A23274624760048B511 /* OnboardingSlide.swift */; };
 		6B773A26274626340048B511 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A25274626340048B511 /* OnboardingCell.swift */; };
 		6BF9EBCC27476E7C00629858 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF9EBCB27476E7C00629858 /* EntryViewController.swift */; };
+		6BF9EBCE2747751000629858 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF9EBCD2747751000629858 /* Utilities.swift */; };
+		6BF9EBD127477C9100629858 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BF9EBD027477C9100629858 /* GoogleService-Info.plist */; };
+		F47801C8F7F7446D7A3B958B /* Pods_WhoMI_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E8E07AC6302C3AB7824C48 /* Pods_WhoMI_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C0D5455A249AC243150D145 /* Pods-WhoMI_Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoMI_Demo.debug.xcconfig"; path = "Target Support Files/Pods-WhoMI_Demo/Pods-WhoMI_Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		6B7739F027429A3E0048B511 /* WhoMI_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoMI_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B7739F327429A3E0048B511 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B7739F527429A3E0048B511 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,6 +58,10 @@
 		6B773A23274624760048B511 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		6B773A25274626340048B511 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 		6BF9EBCB27476E7C00629858 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
+		6BF9EBCD2747751000629858 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		6BF9EBD027477C9100629858 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		99E8E07AC6302C3AB7824C48 /* Pods_WhoMI_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoMI_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD2C09E8F246B4BEC6F91477 /* Pods-WhoMI_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoMI_Demo.release.xcconfig"; path = "Target Support Files/Pods-WhoMI_Demo/Pods-WhoMI_Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F47801C8F7F7446D7A3B958B /* Pods_WhoMI_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +81,8 @@
 			children = (
 				6B7739F227429A3E0048B511 /* WhoMI_Demo */,
 				6B7739F127429A3E0048B511 /* Products */,
+				DA58B71DAC1389FB44C10175 /* Pods */,
+				80DD7ED79119B455E45FAB7C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +97,7 @@
 		6B7739F227429A3E0048B511 /* WhoMI_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				6BF9EBCF2747751800629858 /* Helpers */,
 				6B773A2A274634FB0048B511 /* Models */,
 				6B773A29274633E40048B511 /* Cells */,
 				6B773A27274633C30048B511 /* Extension */,
@@ -93,6 +105,7 @@
 				6B773A1B27452BE30048B511 /* ViewControllers */,
 				6B7739F327429A3E0048B511 /* AppDelegate.swift */,
 				6B7739F527429A3E0048B511 /* SceneDelegate.swift */,
+				6BF9EBD027477C9100629858 /* GoogleService-Info.plist */,
 				6B7739FC27429A460048B511 /* Assets.xcassets */,
 				6B773A0127429A460048B511 /* Info.plist */,
 			);
@@ -103,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				6B773A0D27452B710048B511 /* OnboardingViewController.swift */,
+				6BF9EBCB27476E7C00629858 /* EntryViewController.swift */,
 				6B773A1F27452D320048B511 /* SignUpViewController.swift */,
 				6B773A1D27452D2A0048B511 /* LogInViewController.swift */,
 				6B773A0727452B460048B511 /* HomeViewController.swift */,
@@ -114,7 +128,6 @@
 				6B773A1527452BC70048B511 /* DeleteAccountViewController.swift */,
 				6B773A1727452BD20048B511 /* ResetPWViewController.swift */,
 				6B773A1927452BDF0048B511 /* ChangePNViewController.swift */,
-				6BF9EBCB27476E7C00629858 /* EntryViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -152,6 +165,31 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		6BF9EBCF2747751800629858 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6BF9EBCD2747751000629858 /* Utilities.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		80DD7ED79119B455E45FAB7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99E8E07AC6302C3AB7824C48 /* Pods_WhoMI_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA58B71DAC1389FB44C10175 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C0D5455A249AC243150D145 /* Pods-WhoMI_Demo.debug.xcconfig */,
+				DD2C09E8F246B4BEC6F91477 /* Pods-WhoMI_Demo.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +197,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6B773A0427429A460048B511 /* Build configuration list for PBXNativeTarget "WhoMI_Demo" */;
 			buildPhases = (
+				482FFC85C05ED6A191C65395 /* [CP] Check Pods Manifest.lock */,
 				6B7739EC27429A3E0048B511 /* Sources */,
 				6B7739ED27429A3E0048B511 /* Frameworks */,
 				6B7739EE27429A3E0048B511 /* Resources */,
+				2CC9A51E967F172DB4D21F0F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -211,12 +251,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B773A0027429A460048B511 /* LaunchScreen.storyboard in Resources */,
+				6BF9EBD127477C9100629858 /* GoogleService-Info.plist in Resources */,
 				6B7739FD27429A460048B511 /* Assets.xcassets in Resources */,
 				6B7739FB27429A3E0048B511 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2CC9A51E967F172DB4D21F0F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhoMI_Demo/Pods-WhoMI_Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhoMI_Demo/Pods-WhoMI_Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhoMI_Demo/Pods-WhoMI_Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		482FFC85C05ED6A191C65395 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhoMI_Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6B7739EC27429A3E0048B511 /* Sources */ = {
@@ -236,6 +319,7 @@
 				6B773A1E27452D2A0048B511 /* LogInViewController.swift in Sources */,
 				6B773A1427452BB00048B511 /* SettingViewController.swift in Sources */,
 				6B773A2027452D320048B511 /* SignUpViewController.swift in Sources */,
+				6BF9EBCE2747751000629858 /* Utilities.swift in Sources */,
 				6B7739F627429A3E0048B511 /* SceneDelegate.swift in Sources */,
 				6B773A0A27452B500048B511 /* AddViewController.swift in Sources */,
 				6B773A1827452BD20048B511 /* ResetPWViewController.swift in Sources */,
@@ -384,6 +468,7 @@
 		};
 		6B773A0527429A460048B511 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C0D5455A249AC243150D145 /* Pods-WhoMI_Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -414,6 +499,7 @@
 		};
 		6B773A0627429A460048B511 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD2C09E8F246B4BEC6F91477 /* Pods-WhoMI_Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
