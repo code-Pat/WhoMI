@@ -101,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				6B773A0D27452B710048B511 /* OnboardingViewController.swift */,
+				6B773A1F27452D320048B511 /* SignUpViewController.swift */,
+				6B773A1D27452D2A0048B511 /* LogInViewController.swift */,
 				6B773A0727452B460048B511 /* HomeViewController.swift */,
 				6B773A0927452B500048B511 /* AddViewController.swift */,
 				6B773A0B27452B590048B511 /* PersonalViewController.swift */,
@@ -110,8 +112,6 @@
 				6B773A1527452BC70048B511 /* DeleteAccountViewController.swift */,
 				6B773A1727452BD20048B511 /* ResetPWViewController.swift */,
 				6B773A1927452BDF0048B511 /* ChangePNViewController.swift */,
-				6B773A1D27452D2A0048B511 /* LogInViewController.swift */,
-				6B773A1F27452D320048B511 /* SignUpViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
