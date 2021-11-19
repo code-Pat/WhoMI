@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LogInViewController: UIViewController {
 
@@ -22,6 +23,28 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func logInBtnClicked(_ sender: UIButton) {
+        // 빈칸 없게 만들기
+        
+        let email = idTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+            
+            if error != nil {
+                
+                self.errorLabel.text = error!.localizedDescription
+                self.errorLabel.alpha = 1
+                
+            } else {
+                
+                let homeNavigationController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeNavigationController) as? UINavigationController
+                
+                self.view.window?.rootViewController = homeNavigationController
+                self.view.window?.makeKeyAndVisible()
+                
+            }
+        }
+        
     }
     
     func setUpElements() {
