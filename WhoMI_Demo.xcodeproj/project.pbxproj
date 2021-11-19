@@ -30,6 +30,7 @@
 		6BF9EBCC27476E7C00629858 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF9EBCB27476E7C00629858 /* EntryViewController.swift */; };
 		6BF9EBCE2747751000629858 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF9EBCD2747751000629858 /* Utilities.swift */; };
 		6BF9EBD127477C9100629858 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BF9EBD027477C9100629858 /* GoogleService-Info.plist */; };
+		6BF9EBD32747C61100629858 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF9EBD22747C61100629858 /* Constants.swift */; };
 		F47801C8F7F7446D7A3B958B /* Pods_WhoMI_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99E8E07AC6302C3AB7824C48 /* Pods_WhoMI_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +61,7 @@
 		6BF9EBCB27476E7C00629858 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		6BF9EBCD2747751000629858 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6BF9EBD027477C9100629858 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6BF9EBD22747C61100629858 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		99E8E07AC6302C3AB7824C48 /* Pods_WhoMI_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoMI_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD2C09E8F246B4BEC6F91477 /* Pods-WhoMI_Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoMI_Demo.release.xcconfig"; path = "Target Support Files/Pods-WhoMI_Demo/Pods-WhoMI_Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				6BF9EBCD2747751000629858 /* Utilities.swift */,
+				6BF9EBD22747C61100629858 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				6B773A2027452D320048B511 /* SignUpViewController.swift in Sources */,
 				6BF9EBCE2747751000629858 /* Utilities.swift in Sources */,
 				6B7739F627429A3E0048B511 /* SceneDelegate.swift in Sources */,
+				6BF9EBD32747C61100629858 /* Constants.swift in Sources */,
 				6B773A0A27452B500048B511 /* AddViewController.swift in Sources */,
 				6B773A1827452BD20048B511 /* ResetPWViewController.swift in Sources */,
 				6B773A1A27452BDF0048B511 /* ChangePNViewController.swift in Sources */,

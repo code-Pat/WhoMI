@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseAuth
 import Firebase
+import FirebaseFirestore
 
 class SignUpViewController: UIViewController {
 
@@ -35,16 +36,40 @@ class SignUpViewController: UIViewController {
             
         } else {
             
-            Auth.auth().createUser(withEmail: <#T##String#>, password: <#T##String#>) { (result, err) in
+            let firstName = firstNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastName = lastNameTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 
                 if err != nil {
                     
                     self.showError("유저 생성에 에러가 있음.")
+                    
                 } else {
                     
+                    let db = Firestore.firestore()
+                    
+                    db.collection("users").addDocument(data: ["firstname":firstName, "lastname":lastName, "uid":result!.user.uid]) { (error) in
+                        
+                        if error != nil {
+                            self.showError("유저 데이터 저장에 에러가 있음.")
+                        }
+                    }
+                    
+                    self.transitionToHome()
                 }
             }
         }
+    }
+    
+    func transitionToHome() {
+        
+        let homeNavigationController = storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeNavigationController) as? UINavigationController
+        
+        view.window?.rootViewController = homeNavigationController
+        view.window?.makeKeyAndVisible()
     }
     
     func showError(_ message: String) {
