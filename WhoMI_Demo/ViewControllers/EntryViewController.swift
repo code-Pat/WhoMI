@@ -26,6 +26,5 @@ class EntryViewController: UIViewController {
     }
     
 
-    // this is just for a git test.
     
 }
