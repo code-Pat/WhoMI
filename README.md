@@ -98,13 +98,26 @@
 
 ---
 
-#### **21.11.18(목)**
+#### **21.11.18 (목)**
 
 **Project**
 
-* Onboarding 화면 구현 -> 회원가입과 로그인 버튼은 나중에 추가.
+* Onboarding 화면 구현 완료 -> 회원가입과 로그인 버튼은 나중에 추가.
 * 각 Tab bar에 들어갈 Home, Add, Personal Views 구현.
 
 **Team Building (Zoom meeting 10:00 ~ 12:30)**
 
 * 각자의 기획안과 계획 사항 발표
+
+#### **21.11.19 (금)**
+
+**Project**
+
+* Firebase 연결 완료 (로그인과 회원 정보 관리용) / pod으로 추가 (Firebase Analytics, Auth, Core, Firestore).
+* Cloud Firestore 위치는 asia - northeast3 로 지정.
+* 회원가입과 로그인 페이지 구현 완료 -> Onboarding 화면에 합치기 & 스타일 sheet theme에 맞게 수정하기.
+* 회원가입과 로그인 기능 구현 완료 -> 회원 가입시 필요한 정보와 ID(email), password의 조건 다듬기.
+
+**Team Building (Zoom meeting 12:00 ~ 12:30)**
+
+* 각자 프로젝트 진행 상황 공유 및 리뷰
