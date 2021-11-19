@@ -225,7 +225,7 @@
                                             <action selector="signUpBtnClicked:" destination="0qO-mv-JfI" eventType="touchUpInside" id="BOd-FT-Wy1"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Soq-4o-EpJ">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Soq-4o-EpJ">
                                         <rect key="frame" x="0.0" y="300" width="334" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="3wa-QP-FuD"/>
@@ -297,7 +297,7 @@
                                             <action selector="logInBtnClicked:" destination="83z-SG-LZP" eventType="touchUpInside" id="U7V-vr-s9T"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dU7-7G-iUY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dU7-7G-iUY">
                                         <rect key="frame" x="0.0" y="180" width="334" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="zSd-34-tmS"/>
