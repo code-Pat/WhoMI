@@ -16,11 +16,21 @@ class LogInViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setUpElements()
 
     }
     
     @IBAction func logInBtnClicked(_ sender: UIButton) {
     }
     
+    func setUpElements() {
+        
+        errorLabel.alpha = 0
+        
+        Utilities.styleTextField(idTextField)
+        Utilities.styleTextField(passwordTextField)
+        Utilities.styleFilledButton(logInButton)
+    }
 
 }
