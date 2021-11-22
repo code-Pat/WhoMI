@@ -37,7 +37,7 @@ class LogInViewController: UIViewController {
                 
             } else {
                 
-                let homeNavigationController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeNavigationController) as? UINavigationController
+                let homeNavigationController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.tabBarController) as? UITabBarController
                 
                 self.view.window?.rootViewController = homeNavigationController
                 self.view.window?.makeKeyAndVisible()
