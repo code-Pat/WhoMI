@@ -1496,10 +1496,10 @@
             </objects>
             <point key="canvasLocation" x="4824.6376811594209" y="1066.7410714285713"/>
         </scene>
-        <!--View Controller-->
+        <!--Personal3 View Controller-->
         <scene sceneID="wry-ir-Eeb">
             <objects>
-                <viewController id="46I-EE-omU" sceneMemberID="viewController">
+                <viewController id="46I-EE-omU" customClass="Personal3ViewController" customModule="WhoMI_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yAw-Vl-odd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1649,6 +1649,20 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IiO-q3-ywd"/>
+                    <connections>
+                        <outlet property="entireView" destination="eFz-Ky-Ygn" id="1NJ-yQ-vjE"/>
+                        <outlet property="introduceLabel" destination="QvP-GY-r4k" id="k1e-al-7tJ"/>
+                        <outlet property="introduceTextView" destination="q0K-r2-XFx" id="Mz3-Zz-mRj"/>
+                        <outlet property="introduceView" destination="Eoe-u7-b9V" id="eG6-RE-hPA"/>
+                        <outlet property="scrollView" destination="IFb-7D-Gw0" id="GUB-sJ-lIN"/>
+                        <outlet property="sectionLabel" destination="hQs-qa-ZKx" id="c9k-3u-NGU"/>
+                        <outlet property="sectionView" destination="xYj-dd-ovm" id="D33-mp-BTY"/>
+                        <outlet property="stackView" destination="fsg-UD-OLF" id="EdD-aU-4WM"/>
+                        <outlet property="statusCountLabel" destination="KMV-wb-K7r" id="lWu-Qe-J2N"/>
+                        <outlet property="statusLabel" destination="PVb-Rg-2h0" id="VBS-eC-4ls"/>
+                        <outlet property="statusTextField" destination="etc-Tb-cO2" id="AMe-ou-KgQ"/>
+                        <outlet property="statusView" destination="8QF-fR-lQP" id="Tn4-1x-Fho"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPg-2D-VfA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
