@@ -740,7 +740,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VQ8-rC-MkP">
-                                        <rect key="frame" x="0.0" y="820" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="820" width="414" height="100"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pUK-SI-1iF">
                                                 <rect key="frame" x="324" y="10" width="70" height="30"/>
@@ -754,7 +754,7 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="KZ5-gh-ucw"/>
+                                            <constraint firstAttribute="height" constant="100" id="KZ5-gh-ucw"/>
                                             <constraint firstItem="pUK-SI-1iF" firstAttribute="top" secondItem="VQ8-rC-MkP" secondAttribute="top" constant="10" id="MyN-hf-5CD"/>
                                             <constraint firstAttribute="trailing" secondItem="pUK-SI-1iF" secondAttribute="trailing" constant="20" id="WG5-m2-dCc"/>
                                         </constraints>
@@ -785,6 +785,43 @@
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="Vf6-a6-VU0"/>
                     <connections>
+                        <outlet property="addressCountLabel" destination="wnm-On-bfm" id="gsk-Om-QGe"/>
+                        <outlet property="addressLabel" destination="T6d-oh-F0i" id="LF3-ID-R83"/>
+                        <outlet property="addressTextField" destination="ov9-dO-vNe" id="zCK-FN-SeW"/>
+                        <outlet property="addressView" destination="wzT-X9-SKf" id="qqJ-fX-Fg2"/>
+                        <outlet property="birthCountLabel" destination="KHu-1i-4b1" id="m2H-ZS-5gT"/>
+                        <outlet property="birthLabel" destination="f3T-1e-Kl3" id="gfC-Ez-EKk"/>
+                        <outlet property="birthTextField" destination="fJk-4J-Pz3" id="evG-lr-YWR"/>
+                        <outlet property="birthView" destination="16g-ef-wgh" id="4lr-A0-Jmn"/>
+                        <outlet property="editButton" destination="8pM-Hg-tfS" id="Lxh-Jt-NZ8"/>
+                        <outlet property="emailCountLabel" destination="pU8-Oy-85t" id="2Uf-e2-Ctd"/>
+                        <outlet property="emailLabel" destination="91c-Nk-NeS" id="bch-XS-XD8"/>
+                        <outlet property="emailTextField" destination="qf8-Nu-04l" id="jqd-Ba-8sn"/>
+                        <outlet property="emailView" destination="054-Nh-p01" id="yGR-2D-HVN"/>
+                        <outlet property="entireView" destination="Xf0-XZ-cPS" id="wRK-7O-6NE"/>
+                        <outlet property="genderCountLabel" destination="egC-h2-nts" id="Jgq-W6-k8Y"/>
+                        <outlet property="genderLabel" destination="5TB-im-oRP" id="R7x-te-uLh"/>
+                        <outlet property="genderTextField" destination="fqI-aY-M1e" id="pM8-2U-yNS"/>
+                        <outlet property="genderView" destination="eYj-aa-uAQ" id="x0j-0z-zfj"/>
+                        <outlet property="imageView" destination="e9h-rq-lCt" id="Hkp-HF-pp0"/>
+                        <outlet property="labelView" destination="t4n-hY-WEP" id="Zfc-sE-gmh"/>
+                        <outlet property="nameCountLabel" destination="B1v-QE-SVB" id="ios-8r-8VG"/>
+                        <outlet property="nameLabel" destination="3PN-YG-qqK" id="agT-LH-wfD"/>
+                        <outlet property="nameTextField" destination="m4C-xh-Fys" id="Bet-JL-pEo"/>
+                        <outlet property="nameView" destination="Uxs-Z2-AT0" id="Ybf-bC-aZE"/>
+                        <outlet property="nextButton" destination="pUK-SI-1iF" id="4pf-r7-Dcl"/>
+                        <outlet property="nextView" destination="VQ8-rC-MkP" id="Csi-xd-skU"/>
+                        <outlet property="phoneCountLabel" destination="hr9-uP-nRW" id="WN7-O4-HSa"/>
+                        <outlet property="phoneNumberLabel" destination="oWK-DL-Vji" id="oK2-IE-cMe"/>
+                        <outlet property="phoneNumberView" destination="PSp-s2-1g2" id="hif-Zg-vsF"/>
+                        <outlet property="phoneTextField" destination="wjj-Nz-y7U" id="aw3-Dc-DHT"/>
+                        <outlet property="pictureView" destination="EJY-V5-GPp" id="cBa-Mg-DSJ"/>
+                        <outlet property="scrollView" destination="B0w-BX-p9r" id="QPY-pH-jpC"/>
+                        <outlet property="sectionLabel" destination="RLz-BG-LcE" id="vDJ-wn-xa6"/>
+                        <outlet property="settingButton" destination="cCC-lM-XSK" id="6f8-Cf-t2g"/>
+                        <outlet property="stackView" destination="C8x-lD-6lR" id="Sbf-aG-hHP"/>
+                        <outlet property="topView" destination="w2U-Y6-uEL" id="GTM-Wd-Np3"/>
+                        <outlet property="uploadButton" destination="fD5-dY-l1v" id="gPd-9K-1AG"/>
                         <segue destination="02j-lY-2Y7" kind="show" id="lMZ-G1-a0C"/>
                     </connections>
                 </viewController>
@@ -851,7 +888,7 @@
         <!--Profile-->
         <scene sceneID="ujl-pj-w0L">
             <objects>
-                <viewController id="02j-lY-2Y7" sceneMemberID="viewController">
+                <viewController id="02j-lY-2Y7" customClass="Personal2ViewController" customModule="WhoMI_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mcB-b6-3xn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1401,6 +1438,57 @@
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="PoN-Rx-CZc"/>
                     <connections>
+                        <outlet property="blogCountLabel" destination="K5D-Ob-zs4" id="m8Z-62-3yb"/>
+                        <outlet property="blogLabel" destination="yCs-tG-siY" id="x5S-co-LHg"/>
+                        <outlet property="blogTextField" destination="P3U-X3-oaT" id="2F1-45-szy"/>
+                        <outlet property="blogView" destination="DSV-Xa-P5d" id="wPQ-gE-3qN"/>
+                        <outlet property="developeCountLabel" destination="FFj-j6-dwV" id="bmQ-Wp-EsN"/>
+                        <outlet property="developeLabel" destination="xbr-yE-jtE" id="pVA-OH-ZVl"/>
+                        <outlet property="developeTextField" destination="RHb-S4-YST" id="mX6-7u-qsT"/>
+                        <outlet property="developeView" destination="zM8-6s-MER" id="xe5-5Q-MrW"/>
+                        <outlet property="educationCountLabel" destination="kjH-FI-QBY" id="NCW-4b-N9d"/>
+                        <outlet property="educationLabel" destination="O3b-KR-MlZ" id="lsI-hb-tzU"/>
+                        <outlet property="educationTextField" destination="Pni-eH-oQT" id="ULj-oH-SIl"/>
+                        <outlet property="educationView" destination="esh-da-pFZ" id="ytJ-VK-HZ3"/>
+                        <outlet property="entireView" destination="gBv-jv-yh5" id="LYk-7H-hwB"/>
+                        <outlet property="githubCountLabel" destination="pGX-Ba-DUE" id="I0A-m7-Df8"/>
+                        <outlet property="githubLabel" destination="ZGg-qS-DjF" id="jHH-Cg-vyr"/>
+                        <outlet property="githubTextField" destination="Swo-ig-BVA" id="JmF-IG-20y"/>
+                        <outlet property="githubView" destination="FFH-ks-rY5" id="vcJ-Dm-eAi"/>
+                        <outlet property="hobbyCountLabel" destination="h2O-ax-WZA" id="RQU-zV-2xO"/>
+                        <outlet property="hobbyLabel" destination="hkh-tC-QHS" id="4Wn-3Q-sUr"/>
+                        <outlet property="hobbyTextField" destination="qNk-eP-LJG" id="S23-Ul-35d"/>
+                        <outlet property="hobbyView" destination="mQc-fw-M2C" id="PoR-MH-gIa"/>
+                        <outlet property="interestCountLabel" destination="Gxq-tu-zjj" id="3N7-xS-KEe"/>
+                        <outlet property="interestLabel" destination="BTG-3Y-h1d" id="dqp-9a-FrY"/>
+                        <outlet property="interestTextField" destination="MCF-rZ-hdq" id="8J9-O7-Kax"/>
+                        <outlet property="interestView" destination="o5U-tQ-gTa" id="1YT-HM-Ixe"/>
+                        <outlet property="labelView" destination="v4W-Gb-YFn" id="ZnQ-vN-h5p"/>
+                        <outlet property="languageCountLabel" destination="fX8-tT-Hah" id="t0h-ll-bwa"/>
+                        <outlet property="languageLabel" destination="Jc1-c1-4dK" id="mCk-gn-naW"/>
+                        <outlet property="languageTextField" destination="Mpx-Wu-7SN" id="RJM-9e-z6R"/>
+                        <outlet property="languageView" destination="mWs-2Z-U6k" id="Kxz-qA-5Sc"/>
+                        <outlet property="nextButton" destination="RHO-OV-nRH" id="EaL-qk-aQP"/>
+                        <outlet property="nextView" destination="Zs0-RR-HGO" id="fGd-HX-7gp"/>
+                        <outlet property="phoneCountLabel" destination="Vwv-12-sH3" id="UbQ-7W-i9j"/>
+                        <outlet property="phoneLabel" destination="y5L-79-1j9" id="q3h-fk-Iqq"/>
+                        <outlet property="phoneTextField" destination="Xgw-X8-N9t" id="nbb-Dy-2ce"/>
+                        <outlet property="phonenumView" destination="EHI-UQ-evQ" id="IcA-Pd-BtB"/>
+                        <outlet property="scrollView" destination="Mg9-cc-QYH" id="J0T-0l-Ewx"/>
+                        <outlet property="sectionLabel" destination="puH-g3-FLP" id="TKS-xf-Rv0"/>
+                        <outlet property="stackView" destination="ZcH-5w-pV4" id="g05-Kz-jZ2"/>
+                        <outlet property="websiteCountLabel" destination="M9p-vZ-1QR" id="Rf7-cy-hp1"/>
+                        <outlet property="websiteLabel" destination="M96-9B-q2l" id="XLC-A9-Hgd"/>
+                        <outlet property="websiteTextField" destination="cWc-Xe-OXs" id="EQc-ui-pJ8"/>
+                        <outlet property="websiteView" destination="NCF-Zb-yyj" id="tYH-F8-8WE"/>
+                        <outlet property="workCountLabel" destination="mkZ-Pk-zOH" id="M4z-B5-Ow3"/>
+                        <outlet property="workLabel" destination="5ck-OP-wJ6" id="c9h-ng-T6W"/>
+                        <outlet property="workTextField" destination="BYH-ha-jiX" id="tVN-la-EQh"/>
+                        <outlet property="workView" destination="Juh-5C-IGT" id="1Wf-hM-6da"/>
+                        <outlet property="youtubeCountLabel" destination="YB4-li-yeM" id="l3d-Zr-AHZ"/>
+                        <outlet property="youtubeLabel" destination="onu-Uc-wvf" id="QIH-4p-uff"/>
+                        <outlet property="youtubeTextField" destination="PPw-vA-H1Z" id="OO0-3M-0oj"/>
+                        <outlet property="youtubeView" destination="mXS-fU-aFj" id="M86-c2-Sm0"/>
                         <segue destination="46I-EE-omU" kind="show" id="k0Z-4y-xMB"/>
                     </connections>
                 </viewController>
