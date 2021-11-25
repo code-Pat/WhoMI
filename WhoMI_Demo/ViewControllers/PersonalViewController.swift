@@ -63,5 +63,9 @@ class PersonalViewController: UIViewController {
 
     }
     
-
+    @IBAction func nextBtnClicked(_ sender: UIButton) {
+        guard let personal2VC = self.storyboard?.instantiateViewController(withIdentifier: "personal2VC") as? Personal2ViewController else { return }
+        self.navigationController?.pushViewController(personal2VC, animated: true)
+    }
+    
 }
