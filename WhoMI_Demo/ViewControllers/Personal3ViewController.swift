@@ -30,7 +30,38 @@ class Personal3ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setUpViews()
     }
-    
 
+}
+
+extension Personal3ViewController {
+    private func setUpViews() {
+        //entireView setup
+        Utilities.personalStyleView(entireView)
+        
+        //sectionView setup
+        Utilities.personalStyleView(sectionView)
+        
+        self.sectionLabel.text = "나를 소개하자"
+        Utilities.personalSectionStyleLabel(sectionLabel)
+        
+        //statusView setup
+        Utilities.personalStyleView(statusView)
+        
+        self.statusLabel.text = "나를 소개하는 한 줄"
+        Utilities.personalMainStyleLabel(statusLabel)
+        
+        self.statusCountLabel.text = "0/250"
+        Utilities.personalSubStyleLabel(statusCountLabel)
+        
+        self.statusTextField.placeholder = "나를 소개하는 한 줄을 입력해주세요"
+        
+        //introduceView setup
+        Utilities.personalStyleView(introduceView)
+        
+        self.introduceLabel.text = "기본 소개"
+        Utilities.personalMainStyleLabel(introduceLabel)
+        
+    }
 }
