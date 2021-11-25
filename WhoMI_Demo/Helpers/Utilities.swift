@@ -40,10 +40,36 @@ class Utilities {
         button.tintColor = UIColor.black
     }
     
+    static func personalButton(_ button: UIButton) {
+        
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor.white.cgColor
+        button.layer.cornerRadius = 15
+        button.tintColor = UIColor.orange
+    }
+    
     static func isPasswordValid(_ password : String) -> Bool {
         
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
         return passwordTest.evaluate(with: password)
+    }
+    
+    static func personalStyleView(_ view: UIView) {
+        
+        view.backgroundColor = UIColor.black
+        view.layer.opacity = 0.95
+    }
+    
+    static func personalMainStyleLabel(_ label: UILabel) {
+        
+        label.textColor = .white
+        label.font = .boldSystemFont(ofSize: 16)
+    }
+    
+    static func personalSubStyleLabel(_ label: UILabel) {
+        
+        label.textColor = .white
+        label.font = .systemFont(ofSize: 14)
     }
     
 }

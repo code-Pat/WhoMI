@@ -61,6 +61,7 @@ class PersonalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setUpViews()
     }
     
     @IBAction func nextBtnClicked(_ sender: UIButton) {
@@ -68,4 +69,109 @@ class PersonalViewController: UIViewController {
         self.navigationController?.pushViewController(personal2VC, animated: true)
     }
     
+}
+
+extension PersonalViewController {
+    private func setUpViews() {
+        
+        //self.entireView.backgroundColor = .black
+        
+        //topView setup
+        Utilities.personalStyleView(topView)
+        
+        self.settingButton.setImage(UIImage(systemName: "wrench"), for: .normal)
+        self.settingButton.setTitle("", for: .normal)
+        self.settingButton.contentMode = .scaleAspectFill
+        self.settingButton.tintColor = UIColor.white
+
+        self.editButton.setImage(UIImage(systemName: "bandage"), for: .normal)
+        self.editButton.setTitle("", for: .normal)
+        self.editButton.contentMode = .scaleAspectFill
+        self.editButton.tintColor = UIColor.white
+
+        
+        //pictureView setup
+        Utilities.personalStyleView(pictureView)
+        
+        self.uploadButton.setTitle("이미지 업로드", for: .normal)
+        
+        //labelView setup
+        Utilities.personalStyleView(labelView)
+        
+        self.sectionLabel.text = "기본정보"
+        self.sectionLabel.textColor = .white
+        self.sectionLabel.font = .boldSystemFont(ofSize: 20)
+        
+        //nameView setup
+        Utilities.personalStyleView(nameView)
+        
+        self.nameLabel.text = "이름"
+        Utilities.personalMainStyleLabel(nameLabel)
+        
+        self.nameCountLabel.text = "0/30"
+        Utilities.personalSubStyleLabel(nameCountLabel)
+        
+        self.nameTextField.placeholder = "이름을 입력하세요"
+        
+        
+        //birthView setup
+        Utilities.personalStyleView(birthView)
+        
+        self.birthLabel.text = "생년월일"
+        Utilities.personalMainStyleLabel(birthLabel)
+        
+        self.birthCountLabel.text = "0/30"
+        Utilities.personalSubStyleLabel(birthCountLabel)
+        
+        self.birthTextField.placeholder = "생년월일을 입력하세요"
+            
+        //genderView setup
+        Utilities.personalStyleView(genderView)
+        
+        self.genderLabel.text = "성별"
+        Utilities.personalMainStyleLabel(genderLabel)
+        
+        self.genderCountLabel.text = "0/30"
+        Utilities.personalSubStyleLabel(genderCountLabel)
+        
+        self.genderTextField.placeholder = "성별을 입력하세요"
+        
+        //phoneNumberView setup
+        Utilities.personalStyleView(phoneNumberView)
+        
+        self.phoneNumberLabel.text = "휴대폰번호"
+        Utilities.personalMainStyleLabel(phoneNumberLabel)
+        
+        self.phoneCountLabel.text = "0/30"
+        Utilities.personalSubStyleLabel(phoneCountLabel)
+        
+        self.phoneTextField.placeholder = "휴대폰 번호를 입력하세요"
+        
+        //emailView setup
+        Utilities.personalStyleView(emailView)
+        
+        self.emailLabel.text = "email주소"
+        Utilities.personalMainStyleLabel(emailLabel)
+        
+        self.emailCountLabel.text = "0/30"
+        Utilities.personalSubStyleLabel(emailCountLabel)
+        
+        self.emailTextField.placeholder = "email주소를 입력하세요"
+        
+        //addressView setup
+        Utilities.personalStyleView(addressView)
+        
+        self.addressLabel.text = "주소"
+        Utilities.personalMainStyleLabel(addressLabel)
+        
+        self.addressCountLabel.text = "0/30"
+        Utilities.personalSubStyleLabel(addressCountLabel)
+        
+        self.addressTextField.placeholder = "주소를 입력하세요"
+        
+        //nextView setup
+        Utilities.personalStyleView(nextView)
+        
+        Utilities.personalButton(nextButton)
+    }
 }
