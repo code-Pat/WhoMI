@@ -161,7 +161,7 @@
 
 **Team Building (Zoom meeting 10:00 ~ 10:40)**
 
-* 오늘의 목표 공유
+* 오늘의 목표 공유.
 * 그 동안의 작업간에 알게된, 공유해보고 싶은 내용, 기능들 설명 및 리뷰.
 * Moya- Alamofire 작업을 할 때, 코드를 직관적이고 가독성 좋게 쉽게 작성할 수 있다.
 * Debugging stage에서 xcode상에 hiererchy 기능을 사용하면 뷰 레이어들을 한 눈에 볼 수 있고 새로운 레이어를 추가하려 할 때나, 숨겨져 있는 레이어를 찾아야할 때 유용하다.
@@ -171,3 +171,16 @@
 #### **21.11.25(목)**
 
 **Project**
+
+* PersonalViewController + Personal2ViewController + Personal3ViewController UI구성 및 스타일링 부분 완성 (다시 다듬기).
+* Utilites 파일에 UI관련 style sheet 작성. (label, button, textfield, view, etc.)
+* 기존의 realm 데이터 모델 삭제 -> firebase로 모든 데이터 파트 구현.
+* 로그인/회원가입 구현 여부는 아직 미정.
+* Firebase 공부.
+
+**Team Building (Zoom meeting 10:00 ~ 10:30)**
+
+* 오늘의 목표 공유.
+* 각자의 진행사항 공유 및 peer 리뷰.
+
+---
