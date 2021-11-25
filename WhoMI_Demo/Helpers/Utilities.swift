@@ -60,6 +60,12 @@ class Utilities {
         view.layer.opacity = 0.95
     }
     
+    static func personalSectionStyleLabel(_ label: UILabel) {
+        
+        label.textColor = .white
+        label.font = .boldSystemFont(ofSize: 20)
+    }
+    
     static func personalMainStyleLabel(_ label: UILabel) {
         
         label.textColor = .white

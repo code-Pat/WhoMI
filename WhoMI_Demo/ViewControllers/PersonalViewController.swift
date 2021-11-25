@@ -99,8 +99,7 @@ extension PersonalViewController {
         Utilities.personalStyleView(labelView)
         
         self.sectionLabel.text = "기본정보"
-        self.sectionLabel.textColor = .white
-        self.sectionLabel.font = .boldSystemFont(ofSize: 20)
+        Utilities.personalSectionStyleLabel(sectionLabel)
         
         //nameView setup
         Utilities.personalStyleView(nameView)
