@@ -11,5 +11,6 @@ target 'WhoMI_Demo' do
   pod 'Firebase/Auth'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
+  pod 'RealmSwift', '~>10'
 
 end
