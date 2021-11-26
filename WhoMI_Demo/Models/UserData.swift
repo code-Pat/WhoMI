@@ -6,14 +6,32 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseFirestoreSwift
 
 struct UserData: Codable {
+    // essential data
     let name: String
     let birthDate: String
     let gender: String
     let phoneNumber: String
     let email: String
     let address: String
+    
+    //additional data
+    var github: String?
+    var blog: String?
+    var youtube: String?
+    var website: String?
+    var education: String?
+    var work: String?
+    var develope: String?
+    var language: String?
+    var hobby: String?
+    var interests: String?
+    var workPhone: String?
+    var status: String?
+    var introduce: String?
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -22,5 +40,19 @@ struct UserData: Codable {
         case phoneNumber
         case email
         case address
+        
+        case github
+        case blog
+        case youtube
+        case website
+        case education
+        case work
+        case develope
+        case language
+        case hobby
+        case interests
+        case workPhone
+        case status
+        case introduce
     }
 }
