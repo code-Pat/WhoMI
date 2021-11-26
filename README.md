@@ -189,7 +189,8 @@
 
 **Project**
 
-* ,
+* Personal views에 들어갈 textfields -> TextFieldEffects 라이브러리의 Hoshi 스타일로 선정 -> 약간의 색과 사이즈 customizing 하기.
+* Tab bar -> ColorMatchTabs 스타일로 선정 (세개의 각 탭바가 color theme을 갖고 있고 각 탭으로 이전할 때마다 해당 탭 화면의 background color를 해당 theme에 맞게 변경) -> Home tab: [orange] background, [black] contents, Personal tab: [black] background, [orange] font color, Add tab: 미정.
 
 **Team Building (Zoom meeting 12:00 ~ 12:30)**
 
