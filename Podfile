@@ -12,5 +12,6 @@ target 'WhoMI_Demo' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'RealmSwift', '~>10'
+  pod 'TextFieldEffects'
 
 end

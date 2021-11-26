@@ -10,6 +10,9 @@
 		6B109E24274D12BC005F604E /* Personal2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B109E23274D12BC005F604E /* Personal2ViewController.swift */; };
 		6B109E26274D175C005F604E /* Personal3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B109E25274D175C005F604E /* Personal3ViewController.swift */; };
 		6B30E3C1274E4E5A0053AAC7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B30E3C0274E4E5A0053AAC7 /* DataModel.swift */; };
+		6B30E3C3274FDBCB0053AAC7 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B30E3C2274FDBCA0053AAC7 /* UserData.swift */; };
+		6B30E3C7274FDCE80053AAC7 /* UserDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B30E3C6274FDCE80053AAC7 /* UserDB.swift */; };
+		6B30E3C9274FDD380053AAC7 /* FirestoreDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B30E3C8274FDD380053AAC7 /* FirestoreDB.swift */; };
 		6B7739F427429A3E0048B511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7739F327429A3E0048B511 /* AppDelegate.swift */; };
 		6B7739F627429A3E0048B511 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7739F527429A3E0048B511 /* SceneDelegate.swift */; };
 		6B7739FB27429A3E0048B511 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B7739F927429A3E0048B511 /* Main.storyboard */; };
@@ -30,6 +33,8 @@
 		6B773A222746239A0048B511 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A212746239A0048B511 /* UIView+Extension.swift */; };
 		6B773A24274624770048B511 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A23274624760048B511 /* OnboardingSlide.swift */; };
 		6B773A26274626340048B511 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A25274626340048B511 /* OnboardingCell.swift */; };
+		6BDD85212750A8DC00192F0A /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD85202750A8DC00192F0A /* HoshiTextField.swift */; };
+		6BDD85232750A91600192F0A /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDD85222750A91600192F0A /* TextFieldEffects.swift */; };
 		6BF9EBCC27476E7C00629858 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF9EBCB27476E7C00629858 /* EntryViewController.swift */; };
 		6BF9EBCE2747751000629858 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF9EBCD2747751000629858 /* Utilities.swift */; };
 		6BF9EBD127477C9100629858 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BF9EBD027477C9100629858 /* GoogleService-Info.plist */; };
@@ -42,6 +47,9 @@
 		6B109E23274D12BC005F604E /* Personal2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personal2ViewController.swift; sourceTree = "<group>"; };
 		6B109E25274D175C005F604E /* Personal3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personal3ViewController.swift; sourceTree = "<group>"; };
 		6B30E3C0274E4E5A0053AAC7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		6B30E3C2274FDBCA0053AAC7 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		6B30E3C6274FDCE80053AAC7 /* UserDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDB.swift; sourceTree = "<group>"; };
+		6B30E3C8274FDD380053AAC7 /* FirestoreDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreDB.swift; sourceTree = "<group>"; };
 		6B7739F027429A3E0048B511 /* WhoMI_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoMI_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B7739F327429A3E0048B511 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6B7739F527429A3E0048B511 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +72,8 @@
 		6B773A212746239A0048B511 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		6B773A23274624760048B511 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		6B773A25274626340048B511 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		6BDD85202750A8DC00192F0A /* HoshiTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
+		6BDD85222750A91600192F0A /* TextFieldEffects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
 		6BF9EBCB27476E7C00629858 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
 		6BF9EBCD2747751000629858 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		6BF9EBD027477C9100629858 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -84,6 +94,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B30E3C4274FDBD40053AAC7 /* Trash */ = {
+			isa = PBXGroup;
+			children = (
+				6B30E3C0274E4E5A0053AAC7 /* DataModel.swift */,
+			);
+			path = Trash;
+			sourceTree = "<group>";
+		};
+		6B30E3C5274FDC890053AAC7 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				6B30E3C6274FDCE80053AAC7 /* UserDB.swift */,
+				6B30E3C8274FDD380053AAC7 /* FirestoreDB.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		6B7739E727429A3D0048B511 = {
 			isa = PBXGroup;
 			children = (
@@ -105,8 +132,10 @@
 		6B7739F227429A3E0048B511 /* WhoMI_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				6B30E3C4274FDBD40053AAC7 /* Trash */,
 				6BF9EBCF2747751800629858 /* Helpers */,
 				6B773A2A274634FB0048B511 /* Models */,
+				6B30E3C5274FDC890053AAC7 /* Database */,
 				6B773A29274633E40048B511 /* Cells */,
 				6B773A27274633C30048B511 /* Extension */,
 				6B773A1C27452D0A0048B511 /* Storyboard */,
@@ -171,7 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				6B773A23274624760048B511 /* OnboardingSlide.swift */,
-				6B30E3C0274E4E5A0053AAC7 /* DataModel.swift */,
+				6B30E3C2274FDBCA0053AAC7 /* UserData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,6 +210,8 @@
 			children = (
 				6BF9EBCD2747751000629858 /* Utilities.swift */,
 				6BF9EBD22747C61100629858 /* Constants.swift */,
+				6BDD85202750A8DC00192F0A /* HoshiTextField.swift */,
+				6BDD85222750A91600192F0A /* TextFieldEffects.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -327,20 +358,25 @@
 				6BF9EBCC27476E7C00629858 /* EntryViewController.swift in Sources */,
 				6B773A24274624770048B511 /* OnboardingSlide.swift in Sources */,
 				6B773A0C27452B590048B511 /* PersonalViewController.swift in Sources */,
+				6BDD85212750A8DC00192F0A /* HoshiTextField.swift in Sources */,
 				6B773A1027452B8E0048B511 /* ProfileCellViewController.swift in Sources */,
 				6B773A1627452BC70048B511 /* DeleteAccountViewController.swift in Sources */,
 				6B773A1E27452D2A0048B511 /* LogInViewController.swift in Sources */,
 				6B773A1427452BB00048B511 /* SettingViewController.swift in Sources */,
+				6BDD85232750A91600192F0A /* TextFieldEffects.swift in Sources */,
 				6B773A2027452D320048B511 /* SignUpViewController.swift in Sources */,
 				6BF9EBCE2747751000629858 /* Utilities.swift in Sources */,
 				6B109E24274D12BC005F604E /* Personal2ViewController.swift in Sources */,
+				6B30E3C7274FDCE80053AAC7 /* UserDB.swift in Sources */,
 				6B7739F627429A3E0048B511 /* SceneDelegate.swift in Sources */,
 				6BF9EBD32747C61100629858 /* Constants.swift in Sources */,
+				6B30E3C3274FDBCB0053AAC7 /* UserData.swift in Sources */,
 				6B773A0A27452B500048B511 /* AddViewController.swift in Sources */,
 				6B773A1827452BD20048B511 /* ResetPWViewController.swift in Sources */,
 				6B773A1A27452BDF0048B511 /* ChangePNViewController.swift in Sources */,
 				6B773A0827452B460048B511 /* HomeViewController.swift in Sources */,
 				6B30E3C1274E4E5A0053AAC7 /* DataModel.swift in Sources */,
+				6B30E3C9274FDD380053AAC7 /* FirestoreDB.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

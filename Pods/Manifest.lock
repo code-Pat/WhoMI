@@ -487,6 +487,7 @@ PODS:
   - Realm/Headers (10.20.0)
   - RealmSwift (10.20.0):
     - Realm (= 10.20.0)
+  - TextFieldEffects (1.6.0)
 
 DEPENDENCIES:
   - Firebase/Analytics
@@ -494,6 +495,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Firestore
   - RealmSwift (~> 10)
+  - TextFieldEffects
 
 SPEC REPOS:
   trunk:
@@ -517,6 +519,7 @@ SPEC REPOS:
     - PromisesObjC
     - Realm
     - RealmSwift
+    - TextFieldEffects
 
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
@@ -539,7 +542,8 @@ SPEC CHECKSUMS:
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   Realm: ae32bdc1da7d19c7617e0400201a77acd4a211b9
   RealmSwift: c95eec6a712924870b2e36c4c081d63ec07e5414
+  TextFieldEffects: 529b8aff706fb40f82c41c780c0777941a893796
 
-PODFILE CHECKSUM: 1ccf3cbb6904b06e08a6a201b9e5ea9e077fab8a
+PODFILE CHECKSUM: 805bf05a517ad36aaa6a1dc155c5c366d3133b82
 
 COCOAPODS: 1.11.0
