@@ -95,8 +95,9 @@ class PersonalViewController: UIViewController {
     @IBAction func nextBtnClicked(_ sender: UIButton) {
         let db = Firestore.firestore()
         let docRef = db.collection("userData").document("owner")
+        
         let user: [String:Any] = ["name": nameTextField.text!,
-                            "birthDate": birthTextField.text!,
+                                  "birthDate": birthTextField.text!,
                             "gender": genderTextField.text!,
                             "phoneNumber": phoneTextField.text!,
                             "email": emailTextField.text!,
