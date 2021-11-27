@@ -61,14 +61,19 @@ class PersonalViewController: UIViewController {
     @IBOutlet weak var nextView: UIView!
     @IBOutlet weak var nextButton: UIButton!
     
-    // right bar button
+    //bar button
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    //define db
+    let db = Firestore.firestore()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         saveButton.isEnabled = false
 
         setUpViews()
+        getDataToTextFields()
     }
     
     /*
@@ -93,7 +98,7 @@ class PersonalViewController: UIViewController {
     */
     
     @IBAction func nextBtnClicked(_ sender: UIButton) {
-        let db = Firestore.firestore()
+        
         let docRef = db.collection("userData").document("owner")
         
         let user: [String:Any] = ["name": nameTextField.text!,
@@ -113,6 +118,35 @@ class PersonalViewController: UIViewController {
         
         guard let personal2VC = self.storyboard?.instantiateViewController(withIdentifier: "personal2VC") as? Personal2ViewController else { return }
         self.navigationController?.pushViewController(personal2VC, animated: true)
+    }
+    
+    func getDataToTextFields() {
+        
+        let docRef = db.collection("userData").document("owner")
+        
+        docRef.getDocument { document, error in
+            if let error = error as NSError? {
+                print("Error getting document: \(error.localizedDescription)")
+            }
+            else {
+                if let document = document {
+                    let data = document.data()
+                    let name = data?["name"] as? String ?? ""
+                    let birthDate = data?["birthDate"] as? String ?? ""
+                    let gender = data?["gender"] as? String ?? ""
+                    let phoneNumber = data?["phoneNumber"] as? String ?? ""
+                    let email = data?["email"] as? String ?? ""
+                    let address = data?["address"] as? String ?? ""
+                    
+                    self.nameTextField.text! = name
+                    self.birthTextField.text! = birthDate
+                    self.genderTextField.text! = gender
+                    self.phoneTextField.text! = phoneNumber
+                    self.emailTextField.text! = email
+                    self.addressTextField.text! = address
+                }
+            }
+        }
     }
     
 }

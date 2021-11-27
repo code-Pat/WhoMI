@@ -81,17 +81,18 @@ class Personal2ViewController: UIViewController {
     //bar button
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    //define db
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        setUpViews()
         saveButton.isEnabled = false
 
+        setUpViews()
+        getDataToTextFields()
     }
     
     @IBAction func nextBtnClicked(_ sender: UIButton) {
-        let db = Firestore.firestore()
         let docRef = db.collection("userData").document("ownerAddition")
         let userAdd: [String:Any] = ["github": githubTextField.text!,
                                   "blog": blogTextField.text!,
@@ -116,6 +117,45 @@ class Personal2ViewController: UIViewController {
         
         guard let personal3VC = self.storyboard?.instantiateViewController(withIdentifier: "personal3VC") as? Personal3ViewController else { return }
         self.navigationController?.pushViewController(personal3VC, animated: true)
+    }
+    
+    func getDataToTextFields() {
+        
+        let docRef = db.collection("userData").document("ownerAdd")
+        
+        docRef.getDocument { document, error in
+            if let error = error as NSError? {
+                print("Error getting document: \(error.localizedDescription)")
+            }
+            else {
+                if let document = document {
+                    let data = document.data()
+                    let github = data?["github"] as? String ?? ""
+                    let blog = data?["blog"] as? String ?? ""
+                    let youtube = data?["youtube"] as? String ?? ""
+                    let website = data?["website"] as? String ?? ""
+                    let education = data?["education"] as? String ?? ""
+                    let work = data?["work"] as? String ?? ""
+                    let develope = data?["develope"] as? String ?? ""
+                    let language = data?["language"] as? String ?? ""
+                    let hobby = data?["hobby"] as? String ?? ""
+                    let interests = data?["interests"] as? String ?? ""
+                    let workPhone = data?["workPhone"] as? String ?? ""
+                    
+                    self.githubTextField.text! = github
+                    self.blogTextField.text! = blog
+                    self.youtubeTextField.text! = youtube
+                    self.websiteTextField.text! = website
+                    self.educationTextField.text! = education
+                    self.workTextField.text! = work
+                    self.developeTextField.text! = develope
+                    self.languageTextField.text! = language
+                    self.hobbyTextField.text! = hobby
+                    self.interestTextField.text! = interests
+                    self.phoneTextField.text! = workPhone
+                }
+            }
+        }
     }
     
     /*
@@ -144,10 +184,6 @@ class Personal2ViewController: UIViewController {
         }
     }
     */
-    
-    func saveDate() {
-        
-    }
     
 }
 

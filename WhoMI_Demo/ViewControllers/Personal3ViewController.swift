@@ -32,15 +32,17 @@ class Personal3ViewController: UIViewController {
     //bar button
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    //define db
+    let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUpViews()
+        getDataToTextFields()
     }
     
     @IBAction func saveBtnClicked(_ sender: UIButton) {
-        let db = Firestore.firestore()
     
         let userIntro: [String:Any] = [
             "status": statusTextField.text!,
@@ -59,6 +61,26 @@ class Personal3ViewController: UIViewController {
         navigationController?.popToRootViewController(animated: true)
     }
     
+    func getDataToTextFields() {
+        
+        let docRef = db.collection("userData").document("ownerIntro")
+        
+        docRef.getDocument { document, error in
+            if let error = error as NSError? {
+                print("Error getting document: \(error.localizedDescription)")
+            }
+            else {
+                if let document = document {
+                    let data = document.data()
+                    let status = data?["status"] as? String ?? ""
+                    let introduce = data?["introduce"] as? String ?? ""
+                    
+                    self.statusTextField.text! = status
+                    self.introduceTextView.text! = introduce
+                }
+            }
+        }
+    }
 
 }
 
