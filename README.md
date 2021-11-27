@@ -195,3 +195,14 @@
 **Team Building (Zoom meeting 12:00 ~ 12:30)**
 
 * 회원가입/로그인 기능을 우선은 이메일만 수집하고 아이디/비밀번호 만들게끔 (아이디/비밀번호 찾기, 비밀번호 재설정 기능 구현) -> 만약 리젝 당할시엔 이메일 수집 포기하고, 비밀번호 찾기 및 재설정 기능 포기 하고 단순히 아이디/비밀번호만 입력해서 회원가입 및 로그인 할 수 있게끔.
+
+---
+
+#### **21.11.27(토)**
+
+**Project**
+
+* Personal views(1,2,3) textfield안에 입력된 값 firestore에 올리는 작업 구현.
+* Personal1,2view에서는 next button 클릭시 데이터 저장, personal3view에서는 save button클릭시 데이터 저장 및 root view로 pop 이동.
+* Personal1,2,3view 모두 데이터 저장은 각 페이지별 따로 -> "userData" collection 안에 'owner', 'ownerAdd', 'ownerIntro' 각각의 document 생성 및 1,2,3 view 순서대로 각 document에 저장 -> 각 페이지별 담당하는 데이터의 분류와 목적이 다르게 때문에 다른 document에서 저장 및 관리.
+* textfield가 빈 칸으로 남을 시 firestore에는 "" 으로 저장됨 -> nil로 바꿀지 말지 고려중.
