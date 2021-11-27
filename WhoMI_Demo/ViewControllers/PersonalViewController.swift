@@ -66,10 +66,12 @@ class PersonalViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        saveButton.isEnabled = false
 
         setUpViews()
     }
     
+    /*
     @IBAction func saveBtnClicked(_ sender: UIButton) {
         let db = Firestore.firestore()
         let docRef = db.collection("userData").document("owner")
@@ -88,9 +90,26 @@ class PersonalViewController: UIViewController {
             }
         }
     }
-    
+    */
     
     @IBAction func nextBtnClicked(_ sender: UIButton) {
+        let db = Firestore.firestore()
+        let docRef = db.collection("userData").document("owner")
+        let user: [String:Any] = ["name": nameTextField.text!,
+                            "birthDate": birthTextField.text!,
+                            "gender": genderTextField.text!,
+                            "phoneNumber": phoneTextField.text!,
+                            "email": emailTextField.text!,
+                            "address": addressTextField.text!]
+        
+        docRef.setData(user) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Documnet successfully written!")
+            }
+        }
+        
         guard let personal2VC = self.storyboard?.instantiateViewController(withIdentifier: "personal2VC") as? Personal2ViewController else { return }
         self.navigationController?.pushViewController(personal2VC, animated: true)
     }

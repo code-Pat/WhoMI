@@ -41,12 +41,13 @@ class Personal3ViewController: UIViewController {
     
     @IBAction func saveBtnClicked(_ sender: UIButton) {
         let db = Firestore.firestore()
-        let docRef = db.collection("userData").document("ownerIntro")
+    
         let userIntro: [String:Any] = [
             "status": statusTextField.text!,
             "introduce": introduceTextView.text!
                                   ]
         
+        let docRef = db.collection("userData").document("ownerIntro")
         docRef.setData(userIntro) { err in
             if let err = err {
                 print("Error writing document: \(err)")
@@ -54,6 +55,8 @@ class Personal3ViewController: UIViewController {
                 print("Documnet successfully written!")
             }
         }
+        
+        navigationController?.popViewController(animated: true)
     }
     
 

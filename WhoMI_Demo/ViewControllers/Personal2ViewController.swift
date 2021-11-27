@@ -86,14 +86,39 @@ class Personal2ViewController: UIViewController {
         super.viewDidLoad()
         
         setUpViews()
+        saveButton.isEnabled = false
 
     }
     
     @IBAction func nextBtnClicked(_ sender: UIButton) {
+        let db = Firestore.firestore()
+        let docRef = db.collection("userData").document("ownerAddition")
+        let userAdd: [String:Any] = ["github": githubTextField.text!,
+                                  "blog": blogTextField.text!,
+                                  "youtube": youtubeTextField.text!,
+                                  "website": websiteTextField.text!,
+                                  "education": educationTextField.text!,
+                                  "work": workTextField.text!,
+                                  "develope": developeTextField.text!,
+                                  "language": languageTextField.text!,
+                                  "hobby": hobbyTextField.text!,
+                                  "interests": interestTextField.text!,
+                                  "workPhone": phoneTextField.text!
+                                  ]
+        
+        docRef.setData(userAdd) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Documnet successfully written!")
+            }
+        }
+        
         guard let personal3VC = self.storyboard?.instantiateViewController(withIdentifier: "personal3VC") as? Personal3ViewController else { return }
         self.navigationController?.pushViewController(personal3VC, animated: true)
     }
     
+    /*
     @IBAction func saveBtnClicked(_ sender: UIButton) {
         let db = Firestore.firestore()
         let docRef = db.collection("userData").document("ownerAddition")
@@ -118,6 +143,8 @@ class Personal2ViewController: UIViewController {
             }
         }
     }
+    */
+    
     func saveDate() {
         
     }
