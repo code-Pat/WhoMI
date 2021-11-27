@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 class PersonalViewController: UIViewController {
     
@@ -58,11 +61,34 @@ class PersonalViewController: UIViewController {
     @IBOutlet weak var nextView: UIView!
     @IBOutlet weak var nextButton: UIButton!
     
+    // right bar button
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUpViews()
     }
+    
+    @IBAction func saveBtnClicked(_ sender: UIButton) {
+        let db = Firestore.firestore()
+        let docRef = db.collection("userData").document("owner")
+        let user: [String:Any] = ["name": nameTextField.text!,
+                            "birthDate": birthTextField.text!,
+                            "gender": genderTextField.text!,
+                            "phoneNumber": phoneTextField.text!,
+                            "email": emailTextField.text!,
+                            "address": addressTextField.text!]
+        
+        docRef.setData(user) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Documnet successfully written!")
+            }
+        }
+    }
+    
     
     @IBAction func nextBtnClicked(_ sender: UIButton) {
         guard let personal2VC = self.storyboard?.instantiateViewController(withIdentifier: "personal2VC") as? Personal2ViewController else { return }
@@ -172,5 +198,8 @@ extension PersonalViewController {
         Utilities.personalStyleView(nextView)
         
         Utilities.personalButton(nextButton)
+        
+        //right bar button
+        
     }
 }

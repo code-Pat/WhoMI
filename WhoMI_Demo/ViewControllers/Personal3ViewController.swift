@@ -6,6 +6,9 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseFirestoreSwift
 
 class Personal3ViewController: UIViewController {
 
@@ -26,12 +29,33 @@ class Personal3ViewController: UIViewController {
     @IBOutlet weak var introduceLabel: UILabel!
     @IBOutlet weak var introduceTextView: UITextView!
     
+    //bar button
+    @IBOutlet weak var saveButton: UIBarButtonItem!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setUpViews()
     }
+    
+    @IBAction func saveBtnClicked(_ sender: UIButton) {
+        let db = Firestore.firestore()
+        let docRef = db.collection("userData").document("ownerIntro")
+        let userIntro: [String:Any] = [
+            "status": statusTextField.text!,
+            "introduce": introduceTextView.text!
+                                  ]
+        
+        docRef.setData(userIntro) { err in
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Documnet successfully written!")
+            }
+        }
+    }
+    
 
 }
 

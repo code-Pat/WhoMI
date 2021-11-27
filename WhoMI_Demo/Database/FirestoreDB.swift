@@ -9,7 +9,7 @@ import Foundation
 import FirebaseCore
 import FirebaseFirestore
 //import Firebase
-//import FirebaseFirestoreSwift
+import FirebaseFirestoreSwift
 
 
 class FirestoreDB {

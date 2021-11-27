@@ -823,7 +823,19 @@
                             <constraint firstItem="B0w-BX-p9r" firstAttribute="trailing" secondItem="gkV-ha-Crl" secondAttribute="trailing" id="zdQ-GB-Ejn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile" id="Vf6-a6-VU0"/>
+                    <navigationItem key="navigationItem" title="Profile" id="Vf6-a6-VU0">
+                        <barButtonItem key="rightBarButtonItem" title="Save" style="plain" id="Q30-Nz-hjX">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="teU-Gx-YQ8">
+                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="saveBtnClicked:" destination="2ff-eS-pu5" eventType="touchUpInside" id="fQo-hq-ZZJ"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="addressCountLabel" destination="wnm-On-bfm" id="gsk-Om-QGe"/>
                         <outlet property="addressLabel" destination="T6d-oh-F0i" id="LF3-ID-R83"/>
@@ -856,6 +868,7 @@
                         <outlet property="phoneNumberView" destination="PSp-s2-1g2" id="hif-Zg-vsF"/>
                         <outlet property="phoneTextField" destination="wjj-Nz-y7U" id="aw3-Dc-DHT"/>
                         <outlet property="pictureView" destination="EJY-V5-GPp" id="cBa-Mg-DSJ"/>
+                        <outlet property="saveButton" destination="Q30-Nz-hjX" id="9lD-6w-j6Z"/>
                         <outlet property="scrollView" destination="B0w-BX-p9r" id="QPY-pH-jpC"/>
                         <outlet property="sectionLabel" destination="RLz-BG-LcE" id="vDJ-wn-xa6"/>
                         <outlet property="settingButton" destination="cCC-lM-XSK" id="6f8-Cf-t2g"/>
@@ -1756,7 +1769,19 @@
                             <constraint firstItem="Mg9-cc-QYH" firstAttribute="leading" secondItem="VVs-jo-zob" secondAttribute="leading" id="zWx-Pu-chd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile2" id="PoN-Rx-CZc"/>
+                    <navigationItem key="navigationItem" title="Profile2" id="PoN-Rx-CZc">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="uf4-NP-Qpd">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="D9q-ri-XsO">
+                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="saveBtnClicked:" destination="02j-lY-2Y7" eventType="touchUpInside" id="nnu-0m-dys"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="blogCountLabel" destination="K5D-Ob-zs4" id="m8Z-62-3yb"/>
                         <outlet property="blogLabel" destination="yCs-tG-siY" id="x5S-co-LHg"/>
@@ -1794,6 +1819,7 @@
                         <outlet property="phoneLabel" destination="y5L-79-1j9" id="q3h-fk-Iqq"/>
                         <outlet property="phoneTextField" destination="Xgw-X8-N9t" id="nbb-Dy-2ce"/>
                         <outlet property="phonenumView" destination="EHI-UQ-evQ" id="IcA-Pd-BtB"/>
+                        <outlet property="saveButton" destination="uf4-NP-Qpd" id="RSU-NT-CqQ"/>
                         <outlet property="scrollView" destination="Mg9-cc-QYH" id="J0T-0l-Ewx"/>
                         <outlet property="sectionLabel" destination="puH-g3-FLP" id="TKS-xf-Rv0"/>
                         <outlet property="stackView" destination="ZcH-5w-pV4" id="g05-Kz-jZ2"/>
@@ -1968,12 +1994,25 @@
                             <constraint firstItem="IFb-7D-Gw0" firstAttribute="top" secondItem="iXf-wV-qxX" secondAttribute="top" id="inp-dz-Cxd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Profile3" id="IiO-q3-ywd"/>
+                    <navigationItem key="navigationItem" title="Profile3" id="IiO-q3-ywd">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="GHd-UU-NXx">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="uKZ-Vf-QmI">
+                                <rect key="frame" x="302" y="5" width="92" height="34.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="saveBtnClicked:" destination="46I-EE-omU" eventType="touchUpInside" id="vtd-LO-pUF"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="entireView" destination="eFz-Ky-Ygn" id="1NJ-yQ-vjE"/>
                         <outlet property="introduceLabel" destination="QvP-GY-r4k" id="k1e-al-7tJ"/>
                         <outlet property="introduceTextView" destination="q0K-r2-XFx" id="Mz3-Zz-mRj"/>
                         <outlet property="introduceView" destination="Eoe-u7-b9V" id="eG6-RE-hPA"/>
+                        <outlet property="saveButton" destination="GHd-UU-NXx" id="bQ6-e7-ynQ"/>
                         <outlet property="scrollView" destination="IFb-7D-Gw0" id="GUB-sJ-lIN"/>
                         <outlet property="sectionLabel" destination="hQs-qa-ZKx" id="c9k-3u-NGU"/>
                         <outlet property="sectionView" destination="xYj-dd-ovm" id="D33-mp-BTY"/>
