@@ -969,7 +969,7 @@
                                                             <constraint firstAttribute="height" constant="120" id="ezh-QH-2wy"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVr-ZU-yRI" userLabel="newView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dVr-ZU-yRI" userLabel="StatusView">
                                                         <rect key="frame" x="0.0" y="230" width="414" height="70"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="소개하는 한 줄" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H1U-2n-80Z">
@@ -990,7 +990,7 @@
                                                             <constraint firstItem="H1U-2n-80Z" firstAttribute="leading" secondItem="dVr-ZU-yRI" secondAttribute="leading" constant="20" id="sPd-gp-NYI"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Xx-od-muO" userLabel="oldView">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Xx-od-muO" userLabel="BasicSectionView">
                                                         <rect key="frame" x="0.0" y="300" width="414" height="50"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기본 정보" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ht-uF-ZDg">
@@ -1503,6 +1503,57 @@
                     </view>
                     <navigationItem key="navigationItem" title="Personal" id="c5n-pJ-nQT"/>
                     <connections>
+                        <outlet property="addInfoView" destination="vXt-JN-AtF" id="Ia2-pn-Dtj"/>
+                        <outlet property="addSectionLabel" destination="7ro-Yw-Gkk" id="7Ta-02-5ee"/>
+                        <outlet property="addSectionView" destination="XBd-kE-4tX" id="AHL-rr-CQF"/>
+                        <outlet property="addressInfoLabel" destination="7Xm-PN-aei" id="3Rc-hy-EHy"/>
+                        <outlet property="addressLabel" destination="3Fy-E2-bb2" id="lS7-40-jul"/>
+                        <outlet property="basicInfoView" destination="2jO-0c-4uD" id="3zP-hr-7MZ"/>
+                        <outlet property="basicSectionLabel" destination="5ht-uF-ZDg" id="Ch5-wv-EI7"/>
+                        <outlet property="basicSectionView" destination="5Xx-od-muO" id="Ehg-Hy-11O"/>
+                        <outlet property="birthDateInfoLabel" destination="HrD-yE-HU4" id="N7l-4k-VxW"/>
+                        <outlet property="birthDateLabel" destination="65F-YD-WYM" id="S2H-0P-L3G"/>
+                        <outlet property="blogInfoLabel" destination="QsW-ef-cju" id="BPw-Ye-CKu"/>
+                        <outlet property="blogLabel" destination="z5f-91-fl7" id="oQY-fb-e4U"/>
+                        <outlet property="developeInfoLabel" destination="yoM-xZ-IH6" id="Rh7-zS-X9K"/>
+                        <outlet property="developeLabel" destination="bYa-BK-AEh" id="iiO-tl-QyN"/>
+                        <outlet property="editButton" destination="pb7-Q2-bYX" id="hDW-zM-T3D"/>
+                        <outlet property="educationInfoLabel" destination="Ov9-Q5-Jvc" id="oOT-hR-jWf"/>
+                        <outlet property="educationLabel" destination="RK3-St-Xbq" id="9ST-IO-KHK"/>
+                        <outlet property="emailInfoLabel" destination="nDG-w3-WKc" id="FcI-Sz-wnK"/>
+                        <outlet property="emailLabel" destination="Ln0-i6-mcB" id="OBL-qg-lnJ"/>
+                        <outlet property="entireView" destination="cWK-RK-RV0" id="Z5m-WL-6u0"/>
+                        <outlet property="genderInfoLabel" destination="XKI-L1-EWp" id="1He-gm-6mh"/>
+                        <outlet property="genderLabel" destination="8NV-4I-Ynz" id="dcy-pI-Aw9"/>
+                        <outlet property="githubInfoLabel" destination="GBV-o0-Day" id="OVX-cS-7Gf"/>
+                        <outlet property="githubLabel" destination="fBu-MF-08k" id="dLI-3x-cUP"/>
+                        <outlet property="hobbyInfoLabel" destination="Mp5-4U-Fhd" id="lCt-Pb-3Tv"/>
+                        <outlet property="hobbyLabel" destination="2LI-2K-zbn" id="Vct-tP-zbB"/>
+                        <outlet property="imageShowView" destination="VfE-4k-e8G" id="egn-qu-2bV"/>
+                        <outlet property="imageView" destination="h46-Gv-2Yh" id="mNY-zW-v1m"/>
+                        <outlet property="interestsInfoLabel" destination="UdG-3H-t7J" id="wyX-ZD-GxI"/>
+                        <outlet property="interestsLabel" destination="g3s-sv-DBY" id="Zkc-5b-SxE"/>
+                        <outlet property="languageInfoLabel" destination="CEH-35-XUe" id="r6Z-Gb-Bev"/>
+                        <outlet property="languageLabel" destination="WqC-MF-dkC" id="GVg-oH-v0u"/>
+                        <outlet property="mainSectionLabel" destination="k8I-80-m6U" id="4nq-FD-cx3"/>
+                        <outlet property="mainSectionView" destination="QAR-Yr-Pt9" id="VKg-Vb-h4M"/>
+                        <outlet property="mobileInfoLabel" destination="Cts-hc-LJQ" id="59e-uQ-im9"/>
+                        <outlet property="mobileLabel" destination="XXi-Gi-7e2" id="Rl6-8H-1dr"/>
+                        <outlet property="nameLabel" destination="hde-i8-clE" id="Dlt-ET-OBa"/>
+                        <outlet property="scrollView" destination="ZOt-xK-Q9g" id="uym-ot-vEg"/>
+                        <outlet property="settingButton" destination="lHn-n6-ddj" id="6Cl-y9-CrZ"/>
+                        <outlet property="stackView" destination="93t-Zd-KyL" id="J4O-79-Ahu"/>
+                        <outlet property="statusLabel" destination="H1U-2n-80Z" id="nCV-hQ-pVH"/>
+                        <outlet property="statusView" destination="dVr-ZU-yRI" id="7eM-Iq-MTX"/>
+                        <outlet property="topView" destination="f01-CE-WZK" id="Mib-uV-Tqd"/>
+                        <outlet property="websiteInfoLabel" destination="lu5-nz-LAx" id="rDg-f5-nA6"/>
+                        <outlet property="websiteLabel" destination="IKh-at-aqH" id="1Ex-L2-UKl"/>
+                        <outlet property="workInfoLabel" destination="meA-Ja-FcB" id="oDA-P1-vU5"/>
+                        <outlet property="workLabel" destination="J0g-hI-NCZ" id="TtZ-4f-Qd0"/>
+                        <outlet property="workPhoneInfoLabel" destination="mUm-WE-F3g" id="DI5-3F-KdG"/>
+                        <outlet property="workPhoneLabel" destination="7t7-IK-HSy" id="SRr-Sg-gyB"/>
+                        <outlet property="youtubeInfoLabel" destination="ibe-S2-Tyw" id="2ju-CP-K2f"/>
+                        <outlet property="youtubeLabel" destination="Dtf-Ww-hsT" id="lJX-Xx-8LU"/>
                         <segue destination="2ff-eS-pu5" kind="show" id="Pfs-2K-jJl"/>
                     </connections>
                 </viewController>
