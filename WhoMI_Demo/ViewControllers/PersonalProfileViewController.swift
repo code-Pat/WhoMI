@@ -86,5 +86,85 @@ class PersonalProfileViewController: UIViewController {
 extension PersonalProfileViewController {
     private func setUpViews() {
         
+        //topView setup
+        Utilities.profileStyleView(topView)
+        
+        self.settingButton.setTitle("setting", for: .normal)
+        self.settingButton.contentMode = .scaleAspectFill
+        self.settingButton.tintColor = UIColor.white
+        
+        self.editButton.setTitle("edit", for: .normal)
+        self.editButton.contentMode = .scaleAspectFill
+        self.editButton.tintColor = UIColor.white
+        
+        //mainSectionView setup
+        Utilities.profileStyleView(mainSectionView)
+        
+        Utilities.profileSectionStyleLabel(mainSectionLabel)
+        self.mainSectionLabel.text = "나의 프로필"
+        
+        //imageShowView setup
+        Utilities.profileStyleView(imageShowView)
+        
+        //statusView setup
+        Utilities.profileStyleView(statusView)
+        
+        Utilities.profileInfoStyleLabel(statusLabel)
+        self.statusLabel.text = "여기다가 내가 쓰고 싶은 한 줄을 쓰면 됨."
+        
+        //basicSectionView setup
+        Utilities.profileStyleView(basicSectionView)
+        
+        Utilities.profileSectionStyleLabel(basicSectionLabel)
+        self.basicSectionLabel.text = "기본 정보"
+        
+        //basicInfoView setup
+        Utilities.profileStyleView(basicInfoView)
+        
+        Utilities.profileInfoStyleLabel(nameLabel)
+        
+        Utilities.profileTitleStyleLabel(birthDateLabel)
+        Utilities.profileInfoStyleLabel(birthDateInfoLabel)
+        Utilities.profileTitleStyleLabel(addressLabel)
+        Utilities.profileInfoStyleLabel(addressInfoLabel)
+        Utilities.profileTitleStyleLabel(genderLabel)
+        Utilities.profileInfoStyleLabel(genderInfoLabel)
+        Utilities.profileTitleStyleLabel(emailLabel)
+        Utilities.profileInfoStyleLabel(emailInfoLabel)
+        Utilities.profileTitleStyleLabel(mobileLabel)
+        Utilities.profileInfoStyleLabel(mobileInfoLabel)
+        
+        //addSectionView setup
+        Utilities.profileStyleView(addSectionView)
+        
+        Utilities.profileSectionStyleLabel(addSectionLabel)
+        self.addSectionLabel.text = "부가 정보"
+        
+        //addInfoView setup
+        Utilities.profileStyleView(addInfoView)
+        
+        Utilities.profileTitleStyleLabel(githubLabel)
+        Utilities.profileInfoStyleLabel(githubInfoLabel)
+        Utilities.profileTitleStyleLabel(blogLabel)
+        Utilities.profileInfoStyleLabel(blogInfoLabel)
+        Utilities.profileTitleStyleLabel(youtubeLabel)
+        Utilities.profileInfoStyleLabel(youtubeInfoLabel)
+        Utilities.profileTitleStyleLabel(websiteLabel)
+        Utilities.profileInfoStyleLabel(websiteInfoLabel)
+        Utilities.profileTitleStyleLabel(educationLabel)
+        Utilities.profileInfoStyleLabel(educationInfoLabel)
+        Utilities.profileTitleStyleLabel(workLabel)
+        Utilities.profileInfoStyleLabel(workInfoLabel)
+        Utilities.profileTitleStyleLabel(developeLabel)
+        Utilities.profileInfoStyleLabel(developeInfoLabel)
+        Utilities.profileTitleStyleLabel(languageLabel)
+        Utilities.profileInfoStyleLabel(languageInfoLabel)
+        Utilities.profileTitleStyleLabel(hobbyLabel)
+        Utilities.profileInfoStyleLabel(hobbyInfoLabel)
+        Utilities.profileTitleStyleLabel(interestsLabel)
+        Utilities.profileInfoStyleLabel(interestsInfoLabel)
+        Utilities.profileTitleStyleLabel(workPhoneLabel)
+        Utilities.profileInfoStyleLabel(workPhoneInfoLabel)
+        
     }
 }
