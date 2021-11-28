@@ -204,6 +204,20 @@
 
 * Personal views(1,2,3) textfield안에 입력된 값 firestore에 올리는 작업 구현.
 * Personal1,2view에서는 next button 클릭시 데이터 저장, personal3view에서는 save button클릭시 데이터 저장 및 root view로 pop 이동.
-* Personal1,2,3view 모두 데이터 저장은 각 페이지별 따로 -> "userData" collection 안에 'owner', 'ownerAdd', 'ownerIntro' 각각의 document 생성 및 1,2,3 view 순서대로 각 document에 저장 -> 각 페이지별 담당하는 데이터의 분류와 목적이 다르게 때문에 다른 document에서 저장 및 관리.
+* [Firebase cloud firestore] Personal1,2,3view 모두 데이터 저장은 각 페이지별 따로 -> "userData" collection 안에 'owner', 'ownerAdd', 'ownerIntro' 각각의 document 생성 및 1,2,3 view 순서대로 각 document에 저장 -> 각 페이지별 담당하는 데이터의 분류와 목적이 다르게 때문에 다른 document에서 저장 및 관리.
 * textfield가 빈 칸으로 남을 시 firestore에는 "" 으로 저장됨 -> nil로 바꿀지 말지 고려중.
 * textfield에서 값이 입력되고 한번 저장이 되면 이제 textfield가 자체적으로 유저가 이전에 입력해서 저장해둔 값을 나타내고 있음 -> textfield값에서 snapshot listener의 필요 여부 고민중.
+
+---
+
+#### **21.11.28(일)**
+
+**Project**
+
+* PersonalProfileView: 유저(owner)가 입력한 본인 프로필 데이터(personal views1,2,3)를 보여주는 화면.
+* PersonalProfileView UI 80% 구현 및 스타일링 (Utilities file에 style sheet 일괄 작성)
+
+
+
+---
+
