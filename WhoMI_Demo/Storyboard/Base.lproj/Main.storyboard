@@ -910,6 +910,9 @@
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="settingBtnClicked:" destination="W5A-Gm-8ha" eventType="touchUpInside" id="RaB-xa-bx8"/>
+                                                                </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pb7-Q2-bYX">
                                                                 <rect key="frame" x="244" y="10" width="70" height="30"/>
@@ -919,6 +922,9 @@
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
                                                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                <connections>
+                                                                    <action selector="editBtnClicked:" destination="W5A-Gm-8ha" eventType="touchUpInside" id="cdT-92-oFB"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1555,6 +1561,7 @@
                         <outlet property="youtubeInfoLabel" destination="ibe-S2-Tyw" id="2ju-CP-K2f"/>
                         <outlet property="youtubeLabel" destination="Dtf-Ww-hsT" id="lJX-Xx-8LU"/>
                         <segue destination="2ff-eS-pu5" kind="show" id="Pfs-2K-jJl"/>
+                        <segue destination="0b3-eb-heL" kind="show" id="hwq-5p-qMC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="27n-jn-A4J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1564,13 +1571,13 @@
         <!--Setting View Controller-->
         <scene sceneID="OHB-4T-z6C">
             <objects>
-                <viewController id="0b3-eb-heL" customClass="SettingViewController" customModule="WhoMI_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingVC" id="0b3-eb-heL" customClass="SettingViewController" customModule="WhoMI_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lbc-op-oXj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JQG-Lx-zee">
-                                <rect key="frame" x="0.0" y="44" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7i-qa-sbT">
                                         <rect key="frame" x="20" y="10" width="100" height="20"/>
@@ -1590,7 +1597,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnq-8z-Kjd">
-                                <rect key="frame" x="0.0" y="84" width="414" height="200"/>
+                                <rect key="frame" x="0.0" y="128" width="414" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RA4-5M-awo">
                                         <rect key="frame" x="20" y="30" width="350" height="30"/>
@@ -1635,7 +1642,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2h1-Uh-D94">
-                                <rect key="frame" x="0.0" y="284" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="328" width="414" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알림" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="15O-MD-M5P">
                                         <rect key="frame" x="20" y="10" width="100" height="21"/>
@@ -1655,7 +1662,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OMr-a7-6Tn">
-                                <rect key="frame" x="0.0" y="324" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="368" width="414" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GbW-v6-5rh">
                                         <rect key="frame" x="20" y="20" width="350" height="30"/>
@@ -1676,7 +1683,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V2C-eG-RTx">
-                                <rect key="frame" x="0.0" y="384" width="414" height="40"/>
+                                <rect key="frame" x="0.0" y="428" width="414" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기타" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6c-Wb-cPC">
                                         <rect key="frame" x="20" y="10" width="100" height="21"/>
@@ -1696,7 +1703,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYa-mh-VcO">
-                                <rect key="frame" x="0.0" y="424" width="414" height="438"/>
+                                <rect key="frame" x="0.0" y="468" width="414" height="345"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXJ-n8-Er0">
                                         <rect key="frame" x="20" y="20" width="350" height="30"/>
@@ -1744,7 +1751,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LgE-KG-cX1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4825" y="1827"/>
+            <point key="canvasLocation" x="4867" y="1827"/>
         </scene>
         <!--Home-->
         <scene sceneID="zRK-6G-jog">

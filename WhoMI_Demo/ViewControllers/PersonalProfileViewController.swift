@@ -78,8 +78,21 @@ class PersonalProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setUpViews()
 
     }
+    
+    @IBAction func editBtnClicked(_ sender: UIButton) {
+        guard let personalVC = self.storyboard?.instantiateViewController(withIdentifier: "personalVC") as? PersonalViewController else { return }
+        self.navigationController?.pushViewController(personalVC, animated: true)
+    }
+    
+    @IBAction func settingBtnClicked(_ sender: UIButton) {
+        guard let settingVC = self.storyboard?.instantiateViewController(withIdentifier: "settingVC") as? SettingViewController else { return }
+        self.navigationController?.pushViewController(settingVC, animated: true)
+    }
+    
     
 }
 
