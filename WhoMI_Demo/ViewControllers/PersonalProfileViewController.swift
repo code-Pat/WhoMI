@@ -100,6 +100,29 @@ class PersonalProfileViewController: UIViewController {
         
         let docRef = db.collection("userData").document("owner")
         
+        docRef.addSnapshotListener { [weak self] snapshot, error in
+            guard let data = snapshot?.data(), error == nil else {
+                return
+            }
+            
+            guard let name = data["name"] as? String? ?? "" else { return }
+            guard let birthDate = data["birthDate"] as? String? ?? "" else { return }
+            guard let gender = data["gender"] as? String? ?? "" else { return }
+            guard let phoneNumber = data["phoneNumber"] as? String? ?? "" else { return }
+            guard let email = data["email"] as? String? ?? "" else { return }
+            guard let address = data["address"] as? String? ?? "" else { return }
+            
+            DispatchQueue.main.async {
+                self?.nameLabel.text = name
+                self?.birthDateInfoLabel.text = birthDate
+                self?.genderInfoLabel.text = gender
+                self?.workPhoneInfoLabel.text = phoneNumber
+                self?.emailInfoLabel.text = email
+                self?.addressInfoLabel.text = address
+            }
+            
+        }
+        /*
         docRef.getDocument { document, error in
             if let error = error as NSError? {
                 print("Error getting document: \(error.localizedDescription)")
@@ -123,12 +146,47 @@ class PersonalProfileViewController: UIViewController {
                 }
             }
         }
+         */
     }
     
     func getAdditionalData() {
         
         let docRef = db.collection("userData").document("ownerAddition")
         
+        docRef.addSnapshotListener { [weak self] snapshot, error in
+            guard let data = snapshot?.data(), error == nil else {
+                return
+            }
+            
+            guard let github = data["github"] as? String? ?? "" else { return }
+            guard let blog = data["blog"] as? String? ?? "" else { return }
+            guard let youtube = data["youtube"] as? String? ?? "" else { return }
+            guard let website = data["website"] as? String? ?? "" else { return }
+            guard let education = data["education"] as? String? ?? "" else { return }
+            guard let work = data["work"] as? String? ?? "" else { return }
+            guard let develope = data["develope"] as? String? ?? "" else { return }
+            guard let language = data["language"] as? String? ?? "" else { return }
+            guard let hobby = data["hobby"] as? String? ?? "" else { return }
+            guard let interests = data["interests"] as? String? ?? "" else { return }
+            guard let workPhone = data["workPhone"] as? String? ?? "" else { return }
+            
+            DispatchQueue.main.async {
+                self?.githubInfoLabel.text = github
+                self?.blogInfoLabel.text = blog
+                self?.youtubeInfoLabel.text = youtube
+                self?.websiteInfoLabel.text = website
+                self?.educationInfoLabel.text = education
+                self?.workInfoLabel.text = work
+                self?.developeInfoLabel.text = develope
+                self?.languageInfoLabel.text = language
+                self?.hobbyInfoLabel.text = hobby
+                self?.interestsInfoLabel.text = interests
+                self?.workPhoneInfoLabel.text = workPhone
+                
+            }
+        }
+        
+        /*
         docRef.getDocument { document, error in
             if let error = error as NSError? {
                 print("Error getting document: \(error.localizedDescription)")
@@ -162,12 +220,26 @@ class PersonalProfileViewController: UIViewController {
                 }
             }
         }
+         */
     }
     
     func getIntroData() {
         
         let docRef = db.collection("userData").document("ownerIntro")
         
+        docRef.addSnapshotListener { [weak self] snapshot, error in
+            guard let data = snapshot?.data(), error == nil else {
+                return
+            }
+            
+            guard let status = data["status"] as? String? ?? "" else { return }
+            
+            DispatchQueue.main.async {
+                self?.statusLabel.text = status
+            }
+        }
+        
+        /*
         docRef.getDocument { document, error in
             if let error = error as NSError? {
                 print("Error getting document: \(error.localizedDescription)")
@@ -181,6 +253,7 @@ class PersonalProfileViewController: UIViewController {
                 }
             }
         }
+         */
     }
     
 }
@@ -193,11 +266,11 @@ extension PersonalProfileViewController {
         
         self.settingButton.setTitle("setting", for: .normal)
         self.settingButton.contentMode = .scaleAspectFill
-        self.settingButton.tintColor = UIColor.white
+        self.settingButton.tintColor = .label
         
         self.editButton.setTitle("edit", for: .normal)
         self.editButton.contentMode = .scaleAspectFill
-        self.editButton.tintColor = UIColor.white
+        self.editButton.tintColor = .label
         
         //mainSectionView setup
         Utilities.profileStyleView(mainSectionView)

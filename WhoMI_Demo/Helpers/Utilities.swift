@@ -56,49 +56,49 @@ class Utilities {
     
     static func personalStyleView(_ view: UIView) {
         
-        view.backgroundColor = UIColor.black
+        view.backgroundColor = .secondarySystemBackground
         view.layer.opacity = 0.95
     }
     
     static func personalSectionStyleLabel(_ label: UILabel) {
         
-        label.textColor = .white
+        label.textColor = .label
         label.font = .boldSystemFont(ofSize: 20)
     }
     
     static func personalMainStyleLabel(_ label: UILabel) {
         
-        label.textColor = .white
+        label.textColor = .label
         label.font = .boldSystemFont(ofSize: 16)
     }
     
     static func personalSubStyleLabel(_ label: UILabel) {
         
-        label.textColor = .white
+        label.textColor = .label
         label.font = .systemFont(ofSize: 14)
     }
     
     static func profileStyleView(_ view: UIView) {
         
-        view.backgroundColor = UIColor.black
+        view.backgroundColor = .secondarySystemBackground
         view.layer.opacity = 0.95
     }
     
     static func profileSectionStyleLabel(_ label: UILabel) {
         
-        label.textColor = .white
+        label.textColor = .label
         label.font = .boldSystemFont(ofSize: 20)
     }
     
     static func profileTitleStyleLabel(_ label: UILabel) {
         
-        label.textColor = .white
+        label.textColor = .label
         label.font = .systemFont(ofSize: 12)
     }
     
     static func profileInfoStyleLabel(_ label: UILabel) {
         
-        label.textColor = .white
+        label.textColor = .label
         label.font = .systemFont(ofSize: 16)
     }
     
