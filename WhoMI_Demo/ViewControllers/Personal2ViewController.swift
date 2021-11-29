@@ -192,6 +192,7 @@ extension Personal2ViewController {
         
         //labelView setup
         Utilities.personalStyleView(labelView)
+        self.labelView.layer.addBorder([.bottom], color: UIColor(named: "bigFontColor")!, width: 1.0)
         
         self.sectionLabel.text = "부가정보"
         Utilities.personalSectionStyleLabel(sectionLabel)

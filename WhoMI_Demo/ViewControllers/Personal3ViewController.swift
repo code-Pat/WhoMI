@@ -86,11 +86,16 @@ class Personal3ViewController: UIViewController {
 
 extension Personal3ViewController {
     private func setUpViews() {
+        
+        
+        self.saveButton.tintColor = UIColor(named: "smallFontColor")
+        
         //entireView setup
         Utilities.personalStyleView(entireView)
         
         //sectionView setup
         Utilities.personalStyleView(sectionView)
+        self.sectionView.layer.addBorder([.bottom], color: UIColor(named: "bigFontColor")!, width: 1.0)
         
         self.sectionLabel.text = "나를 소개하자"
         Utilities.personalSectionStyleLabel(sectionLabel)

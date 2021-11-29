@@ -42,10 +42,10 @@ class Utilities {
     
     static func personalButton(_ button: UIButton) {
         
-        button.layer.borderWidth = 1
-        button.layer.borderColor = UIColor.white.cgColor
+        button.layer.borderWidth = 0.8
+        button.layer.borderColor = UIColor(named: "smallFontColor")?.cgColor
         button.layer.cornerRadius = 15
-        button.tintColor = UIColor.orange
+        button.tintColor = UIColor(named: "midFontColor")
     }
     
     static func isPasswordValid(_ password : String) -> Bool {
@@ -56,26 +56,26 @@ class Utilities {
     
     static func personalStyleView(_ view: UIView) {
         
-        view.backgroundColor = .secondarySystemBackground
+        view.backgroundColor = UIColor(named: "backgroundColorA")
         view.layer.opacity = 0.95
     }
     
     static func personalSectionStyleLabel(_ label: UILabel) {
         
-        label.textColor = .label
-        label.font = .boldSystemFont(ofSize: 20)
+        label.textColor = UIColor(named: "bigFontColor")
+        label.font = .boldSystemFont(ofSize: 24)
     }
     
     static func personalMainStyleLabel(_ label: UILabel) {
         
-        label.textColor = UIColor(rgb: 0xf9f9f9)
+        label.textColor = UIColor(named: "midFontColor")
         label.font = .boldSystemFont(ofSize: 16)
     }
     
     static func personalSubStyleLabel(_ label: UILabel) {
         
-        label.textColor = .label
-        label.font = .systemFont(ofSize: 14)
+        label.textColor = UIColor(named: "smallFontColor")
+        label.font = .systemFont(ofSize: 13)
     }
     
     static func profileStyleView(_ view: UIView) {
@@ -107,6 +107,12 @@ class Utilities {
         
         label.textColor = UIColor(named: "smallFontColor")
         label.font = .systemFont(ofSize: 17)
+    }
+    
+    static func imageStyleView(_ imgView: UIImageView) {
+        imgView.layer.cornerRadius = imgView.frame.height/2
+        imgView.layer.borderWidth = 0.5
+        imgView.layer.borderColor = UIColor.clear.cgColor
     }
     
 }

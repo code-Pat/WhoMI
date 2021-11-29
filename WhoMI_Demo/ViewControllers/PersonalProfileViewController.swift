@@ -29,6 +29,7 @@ class PersonalProfileViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     //status View
     @IBOutlet weak var statusView: UIView!
+    @IBOutlet weak var statusIcon: UIButton!
     @IBOutlet weak var statusLabel: UILabel!
     //basic section View
     @IBOutlet weak var basicSectionView: UIView!
@@ -200,12 +201,12 @@ extension PersonalProfileViewController {
         
         self.settingButton.setTitle("setting", for: .normal)
         self.settingButton.contentMode = .scaleToFill
-        self.settingButton.tintColor = .label
+        self.settingButton.tintColor = UIColor(named: "smallFontColor")
         self.settingButton.titleLabel?.font = UIFont(name: "helvetica", size: 10)
         
         self.editButton.setTitle("edit", for: .normal)
         self.editButton.contentMode = .scaleToFill
-        self.editButton.tintColor = .label
+        self.editButton.tintColor = UIColor(named: "smallFontColor")
         self.editButton.titleLabel?.font = UIFont(name: "helvetica", size: 10)
         
         //mainSectionView setup
@@ -218,8 +219,14 @@ extension PersonalProfileViewController {
         //imageShowView setup
         Utilities.profileStyleView(imageShowView)
         
+        Utilities.imageStyleView(imageView)
+        
         //statusView setup
         Utilities.profileStyleView(statusView)
+        
+        self.statusIcon.setImage(UIImage(systemName: "sparkles"), for: .normal)
+        self.statusIcon.setTitle("", for: .normal)
+        self.statusIcon.tintColor = .systemYellow
         
         Utilities.profileInfoStyleLabel(statusLabel)
         self.statusLabel.text = "여기다가 내가 쓰고 싶은 한 줄을 쓰면 됨."
@@ -227,7 +234,7 @@ extension PersonalProfileViewController {
         
         //basicSectionView setup
         Utilities.profileStyleView(basicSectionView)
-        
+        self.basicSectionView.layer.addBorder([.top], color: UIColor(named: "bigFontColor")!, width: 1.0)
         Utilities.profileSectionStyleLabel(basicSectionLabel)
         self.basicSectionLabel.text = "기본 정보"
         

@@ -178,21 +178,28 @@ extension PersonalViewController {
         self.settingButton.setImage(UIImage(systemName: "wrench"), for: .normal)
         self.settingButton.setTitle("", for: .normal)
         self.settingButton.contentMode = .scaleAspectFill
-        self.settingButton.tintColor = UIColor.white
+        self.settingButton.tintColor = UIColor(named: "smallFontColor")
 
         self.editButton.setImage(UIImage(systemName: "bandage"), for: .normal)
         self.editButton.setTitle("", for: .normal)
         self.editButton.contentMode = .scaleAspectFill
-        self.editButton.tintColor = UIColor.white
+        self.editButton.tintColor = UIColor(named: "smallFontColor")
 
         
         //pictureView setup
         Utilities.personalStyleView(pictureView)
+        self.pictureView.layer.addBorder([.top, .bottom], color: UIColor(named: "bigFontColor")!, width: 1.0)
+        
+        Utilities.imageStyleView(imageView)
         
         self.uploadButton.setTitle("이미지 업로드", for: .normal)
+        self.uploadButton.tintColor = UIColor(named: "smallFontColor")
+        self.uploadButton.layer.borderWidth = 0.5
+        self.uploadButton.layer.borderColor = UIColor(named: "smallFontColor")?.cgColor
         
         //labelView setup
         Utilities.personalStyleView(labelView)
+        self.labelView.layer.addBorder([.bottom], color: UIColor(named: "bigFontColor")!, width: 1.0)
         
         self.sectionLabel.text = "기본정보"
         Utilities.personalSectionStyleLabel(sectionLabel)
