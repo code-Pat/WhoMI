@@ -121,7 +121,7 @@ class Personal2ViewController: UIViewController {
     
     func getDataToTextFields() {
         
-        let docRef = db.collection("userData").document("ownerAdd")
+        let docRef = db.collection("userData").document("ownerAddition")
         
         docRef.getDocument { document, error in
             if let error = error as NSError? {
