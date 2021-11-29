@@ -231,3 +231,9 @@
 * UIImagePickerController을 이용해 유저의 아이폰 포토 앨범에서 프로필 이미지를 선택할 수 있게 해줌.
 * Xcode info file에서 유저의 아이폰 포토 앨범 접근 권한 부여.
 * 유저가 프로필 생성 당시 이미지를 포토 앨범에서 고르고 저장하면 이미지가 firebase storage에 업로드 됨.
+* PersonalProfileView에서 유저가 업로드한 사진을 다운 받아옴 -> 하지만 아직 snapshot listener처럼 실시간으로 받아오는 방법을 찾지 못함 -> 추후 구현.
+* UIColor+Extension 추가: hex color를 다루기 위한 파일 생성 -> theme컬러로 잡은 5가지 컬러를 hex color로 표현하기 위함.
+* CALayer+Extension 추가: 뷰의 테두리에 필요한 방향(all, top, bottom, left, right)으로만 boarder를 잡아주기 위함 -> 어떤 뷰든 addBoarder function을 이용해 원하는 방향과, 색, 두께를 정해서 테두리를 잡을 수 있음.
+* Personal1,2,3 views + PersonalProfileView UI 90% 구현 -> 버튼과 텍스트필드만 추가 스타일링.
+
+---
