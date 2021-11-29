@@ -208,6 +208,7 @@ extension PersonalProfileViewController {
         
         Utilities.profileInfoStyleLabel(statusLabel)
         self.statusLabel.text = "여기다가 내가 쓰고 싶은 한 줄을 쓰면 됨."
+        self.statusLabel.contentMode = .center
         
         //basicSectionView setup
         Utilities.profileStyleView(basicSectionView)
@@ -262,6 +263,8 @@ extension PersonalProfileViewController {
         Utilities.profileInfoStyleLabel(interestsInfoLabel)
         Utilities.profileTitleStyleLabel(workPhoneLabel)
         Utilities.profileInfoStyleLabel(workPhoneInfoLabel)
+        
+        
         
     }
 }

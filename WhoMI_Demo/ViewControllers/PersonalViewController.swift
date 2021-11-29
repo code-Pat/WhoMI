@@ -9,6 +9,7 @@ import UIKit
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import FirebaseStorage
 
 class PersonalViewController: UIViewController {
     
@@ -66,8 +67,9 @@ class PersonalViewController: UIViewController {
     
     //define db
     let db = Firestore.firestore()
+    let storage = Storage.storage()
+    let imagePickerController = UIImagePickerController()
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         saveButton.isEnabled = false
@@ -76,26 +78,13 @@ class PersonalViewController: UIViewController {
         getDataToTextFields()
     }
     
-    /*
-    @IBAction func saveBtnClicked(_ sender: UIButton) {
-        let db = Firestore.firestore()
-        let docRef = db.collection("userData").document("owner")
-        let user: [String:Any] = ["name": nameTextField.text!,
-                            "birthDate": birthTextField.text!,
-                            "gender": genderTextField.text!,
-                            "phoneNumber": phoneTextField.text!,
-                            "email": emailTextField.text!,
-                            "address": addressTextField.text!]
+    
+    @IBAction func uploadImgBtnClicked(_ sender: UIButton) {
         
-        docRef.setData(user) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Documnet successfully written!")
-            }
-        }
+        self.imagePickerController.delegate = self
+        self.imagePickerController.sourceType = .photoLibrary
+        present(self.imagePickerController, animated: true, completion: nil)
     }
-    */
     
     @IBAction func nextBtnClicked(_ sender: UIButton) {
         
@@ -149,6 +138,30 @@ class PersonalViewController: UIViewController {
         }
     }
     
+    func uploadImage(img: UIImage) {
+        var data = Data()
+        data = img.jpegData(compressionQuality: 0.8)!
+        let filePath = "profileImage"
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/png"
+        storage.reference().child(filePath).putData(data, metadata: metaData) {
+            (metaData, error) in if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            else {
+                print("successfully uploaded an image")
+            }
+        }
+    }
+    
+    func downloadImage(imgView: UIImageView) {
+        storage.reference(forURL: "putURL").downloadURL { (url, error) in
+            let data = NSData(contentsOf: url!)
+            let image = UIImage(data: data! as Data)
+            imgView.image = image
+        }
+    }
 }
 
 extension PersonalViewController {
@@ -255,5 +268,19 @@ extension PersonalViewController {
         
         //right bar button
         
+    }
+}
+
+extension PersonalViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            imageView.image = image
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: true, completion: nil)
     }
 }

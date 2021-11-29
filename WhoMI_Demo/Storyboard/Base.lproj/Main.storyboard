@@ -446,6 +446,9 @@
                                                                         </fragment>
                                                                     </attributedString>
                                                                 </buttonConfiguration>
+                                                                <connections>
+                                                                    <action selector="uploadImgBtnClicked:" destination="2ff-eS-pu5" eventType="touchUpInside" id="a4R-cx-uup"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
