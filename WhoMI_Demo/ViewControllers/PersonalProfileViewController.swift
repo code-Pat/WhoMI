@@ -120,33 +120,7 @@ class PersonalProfileViewController: UIViewController {
                 self?.emailInfoLabel.text = email
                 self?.addressInfoLabel.text = address
             }
-            
         }
-        /*
-        docRef.getDocument { document, error in
-            if let error = error as NSError? {
-                print("Error getting document: \(error.localizedDescription)")
-            }
-            else {
-                if let document = document {
-                    let data = document.data()
-                    let name = data?["name"] as? String ?? ""
-                    let birthDate = data?["birthDate"] as? String ?? ""
-                    let gender = data?["gender"] as? String ?? ""
-                    let phoneNumber = data?["phoneNumber"] as? String ?? ""
-                    let email = data?["email"] as? String ?? ""
-                    let address = data?["address"] as? String ?? ""
-                    
-                    self.nameLabel.text = name
-                    self.birthDateInfoLabel.text = birthDate
-                    self.genderInfoLabel.text = gender
-                    self.workPhoneInfoLabel.text = phoneNumber
-                    self.emailInfoLabel.text = email
-                    self.addressInfoLabel.text = address
-                }
-            }
-        }
-         */
     }
     
     func getAdditionalData() {
@@ -185,42 +159,6 @@ class PersonalProfileViewController: UIViewController {
                 
             }
         }
-        
-        /*
-        docRef.getDocument { document, error in
-            if let error = error as NSError? {
-                print("Error getting document: \(error.localizedDescription)")
-            }
-            else {
-                if let document = document {
-                    let data = document.data()
-                    let github = data?["github"] as? String ?? ""
-                    let blog = data?["blog"] as? String ?? ""
-                    let youtube = data?["youtube"] as? String ?? ""
-                    let website = data?["website"] as? String ?? ""
-                    let education = data?["education"] as? String ?? ""
-                    let work = data?["work"] as? String ?? ""
-                    let develope = data?["develope"] as? String ?? ""
-                    let language = data?["language"] as? String ?? ""
-                    let hobby = data?["hobby"] as? String ?? ""
-                    let interests = data?["interests"] as? String ?? ""
-                    let workPhone = data?["workPhone"] as? String ?? ""
-                    
-                    self.githubInfoLabel.text! = github
-                    self.blogInfoLabel.text! = blog
-                    self.youtubeInfoLabel.text! = youtube
-                    self.websiteInfoLabel.text! = website
-                    self.educationInfoLabel.text! = education
-                    self.workInfoLabel.text! = work
-                    self.developeInfoLabel.text! = develope
-                    self.languageInfoLabel.text! = language
-                    self.hobbyInfoLabel.text! = hobby
-                    self.interestsInfoLabel.text! = interests
-                    self.workPhoneInfoLabel.text! = workPhone
-                }
-            }
-        }
-         */
     }
     
     func getIntroData() {
@@ -238,22 +176,6 @@ class PersonalProfileViewController: UIViewController {
                 self?.statusLabel.text = status
             }
         }
-        
-        /*
-        docRef.getDocument { document, error in
-            if let error = error as NSError? {
-                print("Error getting document: \(error.localizedDescription)")
-            }
-            else {
-                if let document = document {
-                    let data = document.data()
-                    let status = data?["status"] as? String ?? ""
-                    
-                    self.statusLabel.text! = status
-                }
-            }
-        }
-         */
     }
     
 }
@@ -343,3 +265,81 @@ extension PersonalProfileViewController {
         
     }
 }
+
+/*
+docRef.getDocument { document, error in
+    if let error = error as NSError? {
+        print("Error getting document: \(error.localizedDescription)")
+    }
+    else {
+        if let document = document {
+            let data = document.data()
+            let name = data?["name"] as? String ?? ""
+            let birthDate = data?["birthDate"] as? String ?? ""
+            let gender = data?["gender"] as? String ?? ""
+            let phoneNumber = data?["phoneNumber"] as? String ?? ""
+            let email = data?["email"] as? String ?? ""
+            let address = data?["address"] as? String ?? ""
+            
+            self.nameLabel.text = name
+            self.birthDateInfoLabel.text = birthDate
+            self.genderInfoLabel.text = gender
+            self.workPhoneInfoLabel.text = phoneNumber
+            self.emailInfoLabel.text = email
+            self.addressInfoLabel.text = address
+        }
+    }
+}
+ */
+
+/*
+docRef.getDocument { document, error in
+    if let error = error as NSError? {
+        print("Error getting document: \(error.localizedDescription)")
+    }
+    else {
+        if let document = document {
+            let data = document.data()
+            let github = data?["github"] as? String ?? ""
+            let blog = data?["blog"] as? String ?? ""
+            let youtube = data?["youtube"] as? String ?? ""
+            let website = data?["website"] as? String ?? ""
+            let education = data?["education"] as? String ?? ""
+            let work = data?["work"] as? String ?? ""
+            let develope = data?["develope"] as? String ?? ""
+            let language = data?["language"] as? String ?? ""
+            let hobby = data?["hobby"] as? String ?? ""
+            let interests = data?["interests"] as? String ?? ""
+            let workPhone = data?["workPhone"] as? String ?? ""
+            
+            self.githubInfoLabel.text! = github
+            self.blogInfoLabel.text! = blog
+            self.youtubeInfoLabel.text! = youtube
+            self.websiteInfoLabel.text! = website
+            self.educationInfoLabel.text! = education
+            self.workInfoLabel.text! = work
+            self.developeInfoLabel.text! = develope
+            self.languageInfoLabel.text! = language
+            self.hobbyInfoLabel.text! = hobby
+            self.interestsInfoLabel.text! = interests
+            self.workPhoneInfoLabel.text! = workPhone
+        }
+    }
+}
+ */
+
+/*
+docRef.getDocument { document, error in
+    if let error = error as NSError? {
+        print("Error getting document: \(error.localizedDescription)")
+    }
+    else {
+        if let document = document {
+            let data = document.data()
+            let status = data?["status"] as? String ?? ""
+            
+            self.statusLabel.text! = status
+        }
+    }
+}
+ */
