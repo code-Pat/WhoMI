@@ -221,3 +221,9 @@
 
 ---
 
+#### **21.11.29(월)**
+
+**Project**
+
+* Utilities에서 background color와 font color 전부 systembackground, .label 로 변환 -> 기본 라이트모드 다크모드 세팅 -> 추후에 원래 구상해둔 theme color로 custom color setting 예정.
+* PersonalProfileView에서 firebase상의 user에 관한 모든 데이터를 받아오기 때문에, snapshot listener를 이용해 실시간으로 데이터 로딩하게끔 구현. -> personal1,2,3Views에서 입력된 모든 데이터 값이 실시간으로 로딩됨.
