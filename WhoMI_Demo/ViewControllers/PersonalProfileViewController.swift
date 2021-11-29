@@ -9,6 +9,7 @@ import UIKit
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import FirebaseStorage
 
 class PersonalProfileViewController: UIViewController {
     
@@ -73,13 +74,15 @@ class PersonalProfileViewController: UIViewController {
     @IBOutlet weak var workPhoneLabel: UILabel!
     @IBOutlet weak var workPhoneInfoLabel: UILabel!
     
-    //define db
+    //define db and storage
     let db = Firestore.firestore()
+    let storage = Storage.storage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpViews()
+        getImageData()
         getEssentialData()
         getAdditionalData()
         getIntroData()
@@ -94,6 +97,15 @@ class PersonalProfileViewController: UIViewController {
     @IBAction func settingBtnClicked(_ sender: UIButton) {
         guard let settingVC = self.storyboard?.instantiateViewController(withIdentifier: "settingVC") as? SettingViewController else { return }
         self.navigationController?.pushViewController(settingVC, animated: true)
+    }
+    
+    func getImageData() {
+        storage.reference(forURL: "gs://whomi-5734d.appspot.com/profileImage").downloadURL { (url, error) in
+            let data = NSData(contentsOf: url!)
+            let image = UIImage(data: data! as Data)
+            self.imageView.image = image
+        
+        }
     }
     
     func getEssentialData() {
@@ -187,15 +199,18 @@ extension PersonalProfileViewController {
         Utilities.profileStyleView(topView)
         
         self.settingButton.setTitle("setting", for: .normal)
-        self.settingButton.contentMode = .scaleAspectFill
+        self.settingButton.contentMode = .scaleToFill
         self.settingButton.tintColor = .label
+        self.settingButton.titleLabel?.font = UIFont(name: "helvetica", size: 10)
         
         self.editButton.setTitle("edit", for: .normal)
-        self.editButton.contentMode = .scaleAspectFill
+        self.editButton.contentMode = .scaleToFill
         self.editButton.tintColor = .label
+        self.editButton.titleLabel?.font = UIFont(name: "helvetica", size: 10)
         
         //mainSectionView setup
         Utilities.profileStyleView(mainSectionView)
+        self.mainSectionView.layer.addBorder([.bottom], color: UIColor(named: "bigFontColor")!, width: 1.0)
         
         Utilities.profileSectionStyleLabel(mainSectionLabel)
         self.mainSectionLabel.text = "나의 프로필"
@@ -218,8 +233,9 @@ extension PersonalProfileViewController {
         
         //basicInfoView setup
         Utilities.profileStyleView(basicInfoView)
+        self.basicInfoView.layer.addBorder([.top, .bottom], color: UIColor(named: "bigFontColor")!, width: 1.0)
         
-        Utilities.profileInfoStyleLabel(nameLabel)
+        Utilities.profileNameStyleLabel(nameLabel)
         
         Utilities.profileTitleStyleLabel(birthDateLabel)
         Utilities.profileInfoStyleLabel(birthDateInfoLabel)
@@ -240,6 +256,7 @@ extension PersonalProfileViewController {
         
         //addInfoView setup
         Utilities.profileStyleView(addInfoView)
+        self.addInfoView.layer.addBorder([.top, .bottom], color: UIColor(named: "bigFontColor")!, width: 1.0)
         
         Utilities.profileTitleStyleLabel(githubLabel)
         Utilities.profileInfoStyleLabel(githubInfoLabel)

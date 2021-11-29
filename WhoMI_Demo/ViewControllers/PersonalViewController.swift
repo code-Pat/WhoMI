@@ -65,7 +65,7 @@ class PersonalViewController: UIViewController {
     //bar button
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
-    //define db
+    //define db and storage
     let db = Firestore.firestore()
     let storage = Storage.storage()
     let imagePickerController = UIImagePickerController()
@@ -104,6 +104,8 @@ class PersonalViewController: UIViewController {
                 print("Documnet successfully written!")
             }
         }
+        let image = imageView.image
+        uploadImage(img: image!)
         
         guard let personal2VC = self.storyboard?.instantiateViewController(withIdentifier: "personal2VC") as? Personal2ViewController else { return }
         self.navigationController?.pushViewController(personal2VC, animated: true)
@@ -138,6 +140,7 @@ class PersonalViewController: UIViewController {
         }
     }
     
+    //image size 조절 필요!! 용량이 너무 크게 올라감
     func uploadImage(img: UIImage) {
         var data = Data()
         data = img.jpegData(compressionQuality: 0.8)!
@@ -146,7 +149,7 @@ class PersonalViewController: UIViewController {
         metaData.contentType = "image/png"
         storage.reference().child(filePath).putData(data, metadata: metaData) {
             (metaData, error) in if let error = error {
-                print(error.localizedDescription)
+                print("Error occurred uploading an image: \(error.localizedDescription)")
                 return
             }
             else {
@@ -156,7 +159,7 @@ class PersonalViewController: UIViewController {
     }
     
     func downloadImage(imgView: UIImageView) {
-        storage.reference(forURL: "putURL").downloadURL { (url, error) in
+        storage.reference(forURL: "gs://whomi-5734d.appspot.com").downloadURL { (url, error) in
             let data = NSData(contentsOf: url!)
             let image = UIImage(data: data! as Data)
             imgView.image = image
