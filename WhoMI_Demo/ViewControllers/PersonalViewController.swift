@@ -69,7 +69,7 @@ class PersonalViewController: UIViewController {
     let db = Firestore.firestore()
     let storage = Storage.storage()
     let imagePickerController = UIImagePickerController()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         saveButton.isEnabled = false
@@ -98,6 +98,8 @@ class PersonalViewController: UIViewController {
                             "email": emailTextField.text!,
                             "address": addressTextField.text!]
         
+        
+        
         docRef.setData(user) { err in
             if let err = err {
                 print("Error writing document: \(err)")
@@ -111,7 +113,38 @@ class PersonalViewController: UIViewController {
         guard let personal2VC = self.storyboard?.instantiateViewController(withIdentifier: "personal2VC") as? Personal2ViewController else { return }
         self.navigationController?.pushViewController(personal2VC, animated: true)
     }
-    
+        
+        /*
+        if userData.documentID == "" {
+            let docRef = collectionRef.document()
+            print(docRef.documentID)
+            docRef.setData(user) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Documnet successfully written!")
+                }
+            }
+        } else {
+            let docRef = collectionRef.document("\(userData.documentID)")
+            docRef.setData(user) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Documnet successfully written!")
+                }
+            }
+        }
+            
+        let image = imageView.image
+        uploadImage(img: image!)
+        
+        guard let personal2VC = self.storyboard?.instantiateViewController(withIdentifier: "personal2VC") as? Personal2ViewController else { return }
+        self.navigationController?.pushViewController(personal2VC, animated: true)
+        
+    }
+         */
+        
     func getDataToTextFields() {
         
         let docRef = db.collection("userData").document("owner")

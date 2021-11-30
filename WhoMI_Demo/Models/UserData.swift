@@ -18,6 +18,7 @@ struct UserData: Codable {
     var email: String
     var address: String
     var photo: URL
+    var documentID: String = ""
     
     
     //additional data
@@ -43,6 +44,7 @@ struct UserData: Codable {
         case email
         case address
         case photo
+        case documentID
         
         case github
         case blog
