@@ -115,6 +115,18 @@ class Utilities {
         imgView.layer.borderColor = UIColor.clear.cgColor
     }
     
+    static func cellMainStyleLabel(_ label: UILabel) {
+        
+        label.textColor = UIColor(named: "midFontColor")
+        label.font = .boldSystemFont(ofSize: 16)
+    }
+    
+    static func cellSubStyleLabel(_ label: UILabel) {
+        
+        label.textColor = UIColor(named: "smallFontColor")
+        label.font = .systemFont(ofSize: 14)
+    }
+    
 }
 
 

@@ -82,6 +82,7 @@ class PersonalProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         setUpViews()
         getImageData()
         getEssentialData()

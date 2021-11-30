@@ -11,12 +11,14 @@ import FirebaseFirestoreSwift
 
 struct UserData: Codable {
     // essential data
-    let name: String
-    let birthDate: String
-    let gender: String
-    let phoneNumber: String
-    let email: String
-    let address: String
+    var name: String
+    var birthDate: String
+    var gender: String
+    var phoneNumber: String
+    var email: String
+    var address: String
+    var photo: URL
+    
     
     //additional data
     var github: String?
@@ -40,6 +42,7 @@ struct UserData: Codable {
         case phoneNumber
         case email
         case address
+        case photo
         
         case github
         case blog
@@ -54,5 +57,17 @@ struct UserData: Codable {
         case workPhone
         case status
         case introduce
+    }
+}
+
+extension UserData {
+    static func imageURL(forName name: String) -> URL {
+        let number = (abs(name.hashValue) % 22) + 1
+        let URLString = "gs://whomi-5734d.appspot.com/\(number)"
+        return URL(string: URLString)!
+    }
+    
+    var imageURL: URL {
+        return UserData.imageURL(forName: name)
     }
 }
