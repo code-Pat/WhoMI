@@ -145,8 +145,8 @@ class PersonalViewController: UIViewController {
     func uploadImage(img: UIImage) {
         var data = Data()
         data = img.jpegData(compressionQuality: 0.8)!
-        let number = (abs(self.nameLabel.text.hashValue) % 22) + 1
-        let filePath = "\(number)"
+        //let number = (abs(self.nameLabel.text.hashValue) % 22) + 1
+        let filePath = "profileImage`"
         let metaData = StorageMetadata()
         metaData.contentType = "image/png"
         storage.reference().child(filePath).putData(data, metadata: metaData) {
@@ -161,8 +161,8 @@ class PersonalViewController: UIViewController {
     }
     
     func downloadImage(imgView: UIImageView) {
-        let number = (abs(self.nameLabel.text.hashValue) % 22) + 1
-        storage.reference(forURL: "gs://whomi-5734d.appspot.com/\(number)").downloadURL { (url, error) in
+        //let number = (abs(self.nameLabel.text.hashValue) % 22) + 1
+        storage.reference(forURL: "gs://whomi-5734d.appspot.com/profileImage").downloadURL { (url, error) in
             let data = NSData(contentsOf: url!)
             let image = UIImage(data: data! as Data)
             imgView.image = image
