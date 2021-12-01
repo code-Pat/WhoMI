@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseCore
+import FirebaseAuth
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 import FirebaseStorage
@@ -26,40 +27,46 @@ class HomeCollectionViewCell: UICollectionViewCell {
     let storage = Storage.storage()
     
     func setup() {
-        /*
-        //get image data
-        storage.reference(forURL: "gs://whomi-5734d.appspot.com/profileImage").downloadURL { url, error in
-            let data = NSData(contentsOf: url!)
-            let image = UIImage(data: data! as Data)
-            self.imageView.image = image
-        }
-        */
-        //get label data
-        let doc1Ref = db.collection("userData").document("owner")
-        doc1Ref.addSnapshotListener { [weak self] snapshot, error in
-            guard let data1 = snapshot?.data(), error == nil else {
-                return
-            }
-            
-            guard let name = data1["name"] as? String? ?? "" else { return }
-            guard let phoneNumber = data1["phoneNumber"] as? String? ?? "" else { return }
-            
-            DispatchQueue.main.async {
-                self?.nameLabel.text = name
-                self?.mobileLabel.text = phoneNumber
-            }
-        }
         
-        let doc2Ref = db.collection("userData").document("ownerAddition")
-        doc2Ref.addSnapshotListener {  [weak self] snapshot, error in
-            guard let data2 = snapshot?.data(), error == nil else {
-                return
+        //get image data
+        let userAuth = Auth.auth().currentUser
+        if let userAuth = userAuth {
+            storage.reference(forURL: "gs://whomi-5734d.appspot.com/\(userAuth.uid)").downloadURL { (url, error) in
+                if let error = error {
+                    self.imageView.image = UIImage(named: "sampleImage")
+                    print("Error downloading an image...\(error.localizedDescription)")
+                } else {
+                    let data = NSData(contentsOf: url!)
+                    let image = UIImage(data: data! as Data)
+                    self.imageView.image = image
+                }
             }
-            guard let work = data2["work"] as? String? ?? "" else { return }
-            
-            DispatchQueue.main.async {
-                self?.workLabel.text = work
+            //get label data
+            let docRef = db.collection("\(userAuth.uid)").document("owner")
+            docRef.addSnapshotListener { [weak self] snapshot, error in
+                guard let data = snapshot?.data(), error == nil else {
+                    return
+                }
                 
+                guard let name = data["name"] as? String? ?? "" else { return }
+                guard let phoneNumber = data["phoneNumber"] as? String? ?? "" else { return }
+                
+                DispatchQueue.main.async {
+                    self?.nameLabel.text = name
+                    self?.mobileLabel.text = phoneNumber
+                }
+            }
+            let doc2Ref = db.collection("\(userAuth.uid)").document("ownerAddition")
+            doc2Ref.addSnapshotListener {  [weak self] snapshot, error in
+                guard let data2 = snapshot?.data(), error == nil else {
+                    return
+                }
+                guard let work = data2["work"] as? String? ?? "" else { return }
+                
+                DispatchQueue.main.async {
+                    self?.workLabel.text = work
+                    
+                }
             }
         }
     }

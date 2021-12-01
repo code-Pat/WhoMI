@@ -11,6 +11,7 @@ class EntryViewController: UIViewController {
 
     @IBOutlet weak var signUpButton: UIButton!
     @IBOutlet weak var logInButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,8 @@ class EntryViewController: UIViewController {
         
         Utilities.styleFilledButton(signUpButton)
         Utilities.styleHollowButton(logInButton)
+        self.imageView.image = UIImage(named: "sampleImage")
+        self.imageView.contentMode = .scaleToFill
     }
     
 

@@ -13,11 +13,12 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var sectionView: UIView!
     @IBOutlet weak var sectionLabel: UILabel!
+    @IBOutlet weak var addButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.collectionView.backgroundColor = UIColor(named: "backgroundColorB")
+        self.collectionView.backgroundColor = UIColor(named: "backgroundColorCollection")
         self.collectionView.layer.opacity = 0.8
     
         
@@ -26,6 +27,10 @@ class HomeViewController: UIViewController {
         
         setUpViews()
         
+    }
+    @IBAction func addBtnClicked(_ sender: UIButton) {
+        guard let personalVC = self.storyboard?.instantiateViewController(withIdentifier: "personalVC") as? PersonalViewController else { return }
+        self.navigationController?.pushViewController(personalVC, animated: true)
     }
 }
 
@@ -60,6 +65,11 @@ extension HomeViewController {
         
         Utilities.personalStyleView(sectionView)
         self.sectionView.layer.addBorder([.bottom], color: UIColor(named: "bigFontColor")!, width: 1.0)
+        
+        self.addButton.setImage(UIImage(systemName: "plus"), for: .normal)
+        self.addButton.setTitle("", for: .normal)
+        self.addButton.contentMode = .scaleAspectFill
+        self.addButton.tintColor = UIColor(named: "smallFontColor")
         
         self.sectionLabel.text = "전체"
         Utilities.personalSectionStyleLabel(sectionLabel)

@@ -124,7 +124,7 @@ class Utilities {
     
     static func cellSubStyleLabel(_ label: UILabel) {
         
-        label.textColor = UIColor(named: "smallFontColor")
+        label.textColor = UIColor(named: "cellFontColor")
         label.font = .systemFont(ofSize: 14)
     }
     
