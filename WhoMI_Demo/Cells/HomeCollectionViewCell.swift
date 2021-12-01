@@ -26,13 +26,14 @@ class HomeCollectionViewCell: UICollectionViewCell {
     let storage = Storage.storage()
     
     func setup() {
+        /*
         //get image data
         storage.reference(forURL: "gs://whomi-5734d.appspot.com/profileImage").downloadURL { url, error in
             let data = NSData(contentsOf: url!)
             let image = UIImage(data: data! as Data)
             self.imageView.image = image
         }
-        
+        */
         //get label data
         let doc1Ref = db.collection("userData").document("owner")
         doc1Ref.addSnapshotListener { [weak self] snapshot, error in

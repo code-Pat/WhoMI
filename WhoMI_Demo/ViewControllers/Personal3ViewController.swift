@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseCore
+import FirebaseAuth
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
@@ -44,17 +45,19 @@ class Personal3ViewController: UIViewController {
     
     @IBAction func saveBtnClicked(_ sender: UIButton) {
     
-        let userIntro: [String:Any] = [
-            "status": statusTextField.text!,
-            "introduce": introduceTextView.text!
-                                  ]
-        
-        let docRef = db.collection("userData").document("ownerIntro")
-        docRef.setData(userIntro) { err in
-            if let err = err {
-                print("Error writing document: \(err)")
-            } else {
-                print("Documnet successfully written!")
+        let userAuth = Auth.auth().currentUser
+        if let userAuth = userAuth {
+            let docRef = db.collection("\(userAuth.uid)").document("ownerIntro")
+            let userIntro: [String:Any] = [
+                "status": statusTextField.text!,
+                "introduce": introduceTextView.text!
+                                      ]
+            docRef.setData(userIntro) { err in
+                if let err = err {
+                    print("Error writing document: \(err)")
+                } else {
+                    print("Documnet successfully written!")
+                }
             }
         }
         
@@ -63,20 +66,23 @@ class Personal3ViewController: UIViewController {
     
     func getDataToTextFields() {
         
-        let docRef = db.collection("userData").document("ownerIntro")
-        
-        docRef.getDocument { document, error in
-            if let error = error as NSError? {
-                print("Error getting document: \(error.localizedDescription)")
-            }
-            else {
-                if let document = document {
-                    let data = document.data()
-                    let status = data?["status"] as? String ?? ""
-                    let introduce = data?["introduce"] as? String ?? ""
-                    
-                    self.statusTextField.text! = status
-                    self.introduceTextView.text! = introduce
+        let userAuth = Auth.auth().currentUser
+        if let userAuth = userAuth {
+            let docRef = db.collection("\(userAuth.uid)").document("ownerIntro")
+            
+            docRef.getDocument { document, error in
+                if let error = error as NSError? {
+                    print("Error getting document: \(error.localizedDescription)")
+                }
+                else {
+                    if let document = document {
+                        let data = document.data()
+                        let status = data?["status"] as? String ?? ""
+                        let introduce = data?["introduce"] as? String ?? ""
+                        
+                        self.statusTextField.text! = status
+                        self.introduceTextView.text! = introduce
+                    }
                 }
             }
         }
