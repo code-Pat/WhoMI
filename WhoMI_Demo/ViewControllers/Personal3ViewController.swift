@@ -112,7 +112,7 @@ extension Personal3ViewController {
         self.statusLabel.text = "나를 소개하는 한 줄"
         Utilities.personalMainStyleLabel(statusLabel)
         
-        self.statusCountLabel.text = "0/250"
+        self.statusCountLabel.text = "150자"
         Utilities.personalSubStyleLabel(statusCountLabel)
         
         self.statusTextField.placeholder = "나를 소개하는 한 줄을 입력해주세요"
