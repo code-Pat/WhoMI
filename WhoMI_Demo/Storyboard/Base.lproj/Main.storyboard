@@ -348,17 +348,17 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0a-oa-Nbg">
-                                <rect key="frame" x="80" y="208" width="254" height="250"/>
+                                <rect key="frame" x="80" y="208" width="254" height="200"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tDb-C8-H7J">
-                                        <rect key="frame" x="0.0" y="0.0" width="254" height="250"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="254" height="200"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="tDb-C8-H7J" firstAttribute="leading" secondItem="D0a-oa-Nbg" secondAttribute="leading" id="KLn-Zi-f2M"/>
                                     <constraint firstAttribute="trailing" secondItem="tDb-C8-H7J" secondAttribute="trailing" id="dEc-zv-WDc"/>
-                                    <constraint firstAttribute="height" constant="250" id="dTF-bf-Fnm"/>
+                                    <constraint firstAttribute="height" constant="200" id="dTF-bf-Fnm"/>
                                     <constraint firstAttribute="bottom" secondItem="tDb-C8-H7J" secondAttribute="bottom" id="heP-hc-Bmp"/>
                                     <constraint firstItem="tDb-C8-H7J" firstAttribute="top" secondItem="D0a-oa-Nbg" secondAttribute="top" id="p7T-Ma-9D2"/>
                                 </constraints>
