@@ -14,6 +14,7 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var logInButton: UIButton!
     @IBOutlet weak var errorLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +55,9 @@ class LogInViewController: UIViewController {
         Utilities.styleTextField(idTextField)
         Utilities.styleTextField(passwordTextField)
         Utilities.styleFilledButton(logInButton)
+        
+        self.imageView.image = UIImage(named: "sampleImage")
+        self.imageView.contentMode = .scaleToFill
     }
 
 }

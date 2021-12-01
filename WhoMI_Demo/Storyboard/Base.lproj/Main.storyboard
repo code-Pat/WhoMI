@@ -595,9 +595,21 @@
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="bandage.fill" catalog="system"/>
                                                     </button>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mj1-2D-thY">
+                                                        <rect key="frame" x="107" y="15" width="200" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="200" id="j2X-Zd-MTz"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="mj1-2D-thY" secondAttribute="bottom" constant="15" id="1BA-XG-rqP"/>
+                                                    <constraint firstItem="mj1-2D-thY" firstAttribute="centerX" secondItem="w2U-Y6-uEL" secondAttribute="centerX" id="AdP-KI-861"/>
+                                                    <constraint firstItem="mj1-2D-thY" firstAttribute="top" secondItem="w2U-Y6-uEL" secondAttribute="top" constant="15" id="DWq-zV-vzS"/>
                                                     <constraint firstItem="cCC-lM-XSK" firstAttribute="centerY" secondItem="w2U-Y6-uEL" secondAttribute="centerY" id="Ofm-0Y-LlI"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="TA5-zm-pnF"/>
                                                     <constraint firstAttribute="trailing" secondItem="cCC-lM-XSK" secondAttribute="trailing" constant="10" id="eog-tj-Cr4"/>
@@ -970,6 +982,7 @@
                         <outlet property="phoneNumberView" destination="PSp-s2-1g2" id="hif-Zg-vsF"/>
                         <outlet property="phoneTextField" destination="wjj-Nz-y7U" id="aw3-Dc-DHT"/>
                         <outlet property="pictureView" destination="EJY-V5-GPp" id="cBa-Mg-DSJ"/>
+                        <outlet property="profileLabel" destination="mj1-2D-thY" id="FkS-uP-hZG"/>
                         <outlet property="scrollView" destination="B0w-BX-p9r" id="QPY-pH-jpC"/>
                         <outlet property="sectionLabel" destination="RLz-BG-LcE" id="vDJ-wn-xa6"/>
                         <outlet property="settingButton" destination="cCC-lM-XSK" id="6f8-Cf-t2g"/>
@@ -1004,9 +1017,9 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                                         <subviews>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHn-n6-ddj">
-                                                                <rect key="frame" x="329" y="10" width="70" height="30"/>
+                                                                <rect key="frame" x="324" y="10" width="75" height="30"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="70" id="0VO-4Y-Wjl"/>
+                                                                    <constraint firstAttribute="width" constant="75" id="0VO-4Y-Wjl"/>
                                                                     <constraint firstAttribute="height" constant="30" id="55F-NS-WRo"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
@@ -1016,9 +1029,9 @@
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pb7-Q2-bYX">
-                                                                <rect key="frame" x="244" y="10" width="70" height="30"/>
+                                                                <rect key="frame" x="256" y="10" width="60" height="30"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="70" id="miK-4m-m9m"/>
+                                                                    <constraint firstAttribute="width" constant="60" id="miK-4m-m9m"/>
                                                                     <constraint firstAttribute="height" constant="30" id="w3g-rO-9Lc"/>
                                                                 </constraints>
                                                                 <state key="normal" title="Button"/>
@@ -1030,7 +1043,7 @@
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
-                                                            <constraint firstItem="lHn-n6-ddj" firstAttribute="leading" secondItem="pb7-Q2-bYX" secondAttribute="trailing" constant="15" id="acm-zS-RzT"/>
+                                                            <constraint firstItem="lHn-n6-ddj" firstAttribute="leading" secondItem="pb7-Q2-bYX" secondAttribute="trailing" constant="8" id="acm-zS-RzT"/>
                                                             <constraint firstAttribute="height" constant="50" id="azO-M9-Jzq"/>
                                                             <constraint firstItem="lHn-n6-ddj" firstAttribute="top" secondItem="f01-CE-WZK" secondAttribute="top" constant="10" id="klU-Iw-5iy"/>
                                                             <constraint firstAttribute="trailing" secondItem="lHn-n6-ddj" secondAttribute="trailing" constant="15" id="uuH-4Z-7ml"/>

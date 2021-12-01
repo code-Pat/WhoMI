@@ -26,7 +26,7 @@ class EntryViewController: UIViewController {
         Utilities.styleFilledButton(signUpButton)
         Utilities.styleHollowButton(logInButton)
         self.imageView.image = UIImage(named: "sampleImage")
-        self.imageView.contentMode = .scaleToFill
+        self.imageView.contentMode = .scaleAspectFit
     }
     
 
