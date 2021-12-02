@@ -51,7 +51,18 @@
 * QR코드 촬영을 통한 친구 추가 가능 여부
 * 스마트폰 내의 연락처 동기화 가능 여부
 * 앱 외 알림에 대한 가능 여부
-  
+
+## Tests
+#### **Mobile Test1 - 21.12.02(목)**
+
+*__Issues__*: 
+ 1. 회원가입/로그인 스크린에서 부터 키보드가 한번 열리면 닫히질 않는다.
+ 2. Textfield 단어 자동 완성이 굉장히 신경쓰인다.
+ 3. 화면 전환시 애니메이션이 너무 단순하고 모든 경우 똑같다.
+
+*__개선점__*:
+ 너무 기본적인 부분들에서 빠진게 많은것 같다... 키보드 부분과 textfield 자동완성, 뷰 이동 간 애니메이션 다시 체크하기.
+
 
 ## Daily Reports
 
@@ -217,8 +228,6 @@
 * PersonalProfileView: 유저(owner)가 입력한 본인 프로필 데이터(personal views1,2,3)를 보여주는 화면.
 * PersonalProfileView UI 80% 구현 및 스타일링 (Utilities file에 style sheet 일괄 작성)
 
-
-
 ---
 
 #### **21.11.29(월)**
@@ -237,3 +246,31 @@
 * Personal1,2,3 views + PersonalProfileView UI 90% 구현 -> 버튼과 텍스트필드만 추가 스타일링.
 
 ---
+
+#### **21.11.30(화)**
+
+**Project**
+
+* [Firestore] 데이터를 개인 유저로써 올리고 내리는데에는 문제가 없지만, 추후 유저가 늘어났을 경우 고유 아이디를 통해 접속을 해서 데이터를 받아와야 하기 때문에, 이슈 해결중.
+* 회원가입과 로그인 기능을 중간에 뺐었는데, 개인정보를 특별히 수집하지 않는 선에서, nickname과 password만 만드는 한도로 회원가입/로그인 기능 다시 추가. 
+* 전반적인 UI 다듬기와 theme color를 이용한 라이트 모드와 다크 모드 별 디자인 구현.
+
+---
+
+#### **21.12.01(수)**
+
+**Project**
+
+* [Firestore] 회원가입을 통해 한 유저에게 고유의 firestore에서 제공하는 uid부여 -> uid를 이용해 각 유저별 collection생성 및 각 유저별 데이터를 document에 저장. -> 이제 어느 디바이스에서 로그인 하던 데이터 crud가능 및 유저별 다른 유저 추가 가능.
+* [Firebase Storage] 프로필 이미지로 사용될 이미지 파일들은 storage에 jpeg형태로 따로 저장. 이슈: firestore document에 같이 저장되는것이 아니기 때문에 관리가 어렵다 -> 각 유저에게 부여되는 고유의 uid를 이미지 파일 이름으로써 저장 -> filepath에 uid만 있으면 이미지를 쉽게 불러올 수 있다. 이슈 해결.
+* UI 최종 다듬기 및 쓰이지 않는 불필요한 label, button, textfield 지우기. 
+
+---
+
+#### **21.12.02(목)**
+
+**Project**
+
+* [Figma] App Icon 제작.
+* xcode 프로젝트 app store connect Test Flight에 올리기. 
+* 모바일 Test 1 진행.
