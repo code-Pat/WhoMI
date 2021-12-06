@@ -274,3 +274,11 @@
 * [Figma] App Icon 제작.
 * xcode 프로젝트 app store connect Test Flight에 올리기. 
 * 모바일 Test 1 진행.
+
+---
+
+#### **21.12.06(월)**
+
+**Project**
+
+* 
