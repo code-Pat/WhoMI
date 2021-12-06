@@ -60,4 +60,7 @@ class LogInViewController: UIViewController {
         self.imageView.contentMode = .scaleToFill
     }
 
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
 }
