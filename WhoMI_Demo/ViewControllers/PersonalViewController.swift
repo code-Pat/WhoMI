@@ -18,8 +18,6 @@ class PersonalViewController: UIViewController {
     @IBOutlet weak var entireView: UIView!
     //topView
     @IBOutlet weak var topView: UIView!
-    @IBOutlet weak var settingButton: UIButton!
-    @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var profileLabel: UILabel!
     //stackView
     @IBOutlet weak var stackView: UIStackView!
@@ -194,17 +192,6 @@ extension PersonalViewController {
         self.profileLabel.text = "프로필 만들기"
         self.profileLabel.textColor = UIColor(named: "smallFontColor")
         self.profileLabel.font = .boldSystemFont(ofSize: 24)
-        
-        self.settingButton.setImage(UIImage(systemName: "wrench"), for: .normal)
-        self.settingButton.setTitle("", for: .normal)
-        self.settingButton.contentMode = .scaleAspectFill
-        self.settingButton.tintColor = UIColor(named: "smallFontColor")
-
-        self.editButton.setImage(UIImage(systemName: "bandage"), for: .normal)
-        self.editButton.setTitle("", for: .normal)
-        self.editButton.contentMode = .scaleAspectFill
-        self.editButton.tintColor = UIColor(named: "smallFontColor")
-
         
         //pictureView setup
         Utilities.personalStyleView(pictureView)

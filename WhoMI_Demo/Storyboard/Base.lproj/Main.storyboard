@@ -575,26 +575,6 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2U-Y6-uEL">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                                 <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCC-lM-XSK">
-                                                        <rect key="frame" x="374" y="15" width="30" height="30"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="30" id="KLN-FG-k9f"/>
-                                                            <constraint firstAttribute="width" constant="30" id="wfU-Xc-oM0"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="wrench.fill" catalog="system">
-                                                            <attributedString key="attributedTitle"/>
-                                                        </buttonConfiguration>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pM-Hg-tfS">
-                                                        <rect key="frame" x="334" y="15" width="30" height="30"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="30" id="DuY-2j-ijD"/>
-                                                            <constraint firstAttribute="height" constant="30" id="MrY-Kk-wol"/>
-                                                        </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" image="bandage.fill" catalog="system"/>
-                                                    </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mj1-2D-thY">
                                                         <rect key="frame" x="107" y="15" width="200" height="30"/>
                                                         <constraints>
@@ -610,12 +590,8 @@
                                                     <constraint firstAttribute="bottom" secondItem="mj1-2D-thY" secondAttribute="bottom" constant="15" id="1BA-XG-rqP"/>
                                                     <constraint firstItem="mj1-2D-thY" firstAttribute="centerX" secondItem="w2U-Y6-uEL" secondAttribute="centerX" id="AdP-KI-861"/>
                                                     <constraint firstItem="mj1-2D-thY" firstAttribute="top" secondItem="w2U-Y6-uEL" secondAttribute="top" constant="15" id="DWq-zV-vzS"/>
-                                                    <constraint firstItem="cCC-lM-XSK" firstAttribute="centerY" secondItem="w2U-Y6-uEL" secondAttribute="centerY" id="Ofm-0Y-LlI"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="TA5-zm-pnF"/>
-                                                    <constraint firstAttribute="trailing" secondItem="cCC-lM-XSK" secondAttribute="trailing" constant="10" id="eog-tj-Cr4"/>
                                                     <constraint firstAttribute="height" constant="60" id="mfr-52-zOh"/>
-                                                    <constraint firstItem="cCC-lM-XSK" firstAttribute="leading" secondItem="8pM-Hg-tfS" secondAttribute="trailing" constant="10" id="off-BW-Y2l"/>
-                                                    <constraint firstItem="8pM-Hg-tfS" firstAttribute="centerY" secondItem="w2U-Y6-uEL" secondAttribute="centerY" id="qLM-ib-SH5"/>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="C8x-lD-6lR">
@@ -963,7 +939,6 @@
                         <outlet property="birthLabel" destination="f3T-1e-Kl3" id="gfC-Ez-EKk"/>
                         <outlet property="birthTextField" destination="fJk-4J-Pz3" id="evG-lr-YWR"/>
                         <outlet property="birthView" destination="16g-ef-wgh" id="4lr-A0-Jmn"/>
-                        <outlet property="editButton" destination="8pM-Hg-tfS" id="Lxh-Jt-NZ8"/>
                         <outlet property="emailLabel" destination="91c-Nk-NeS" id="bch-XS-XD8"/>
                         <outlet property="emailTextField" destination="qf8-Nu-04l" id="jqd-Ba-8sn"/>
                         <outlet property="emailView" destination="054-Nh-p01" id="yGR-2D-HVN"/>
@@ -985,7 +960,6 @@
                         <outlet property="profileLabel" destination="mj1-2D-thY" id="FkS-uP-hZG"/>
                         <outlet property="scrollView" destination="B0w-BX-p9r" id="QPY-pH-jpC"/>
                         <outlet property="sectionLabel" destination="RLz-BG-LcE" id="vDJ-wn-xa6"/>
-                        <outlet property="settingButton" destination="cCC-lM-XSK" id="6f8-Cf-t2g"/>
                         <outlet property="stackView" destination="C8x-lD-6lR" id="Sbf-aG-hHP"/>
                         <outlet property="topView" destination="w2U-Y6-uEL" id="GTM-Wd-Np3"/>
                         <outlet property="uploadButton" destination="fD5-dY-l1v" id="gPd-9K-1AG"/>
@@ -2644,12 +2618,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bandage.fill" catalog="system" width="128" height="124"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="plus" catalog="system" width="128" height="113"/>
         <image name="sampleImage" width="500" height="336"/>
-        <image name="wrench.fill" catalog="system" width="128" height="125"/>
         <namedColor name="backgroundColorCell">
             <color red="0.074509803921568626" green="0.074509803921568626" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
