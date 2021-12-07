@@ -20,7 +20,6 @@ class PersonalProfileViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     //top View
     @IBOutlet weak var topView: UIView!
-    @IBOutlet weak var settingButton: UIButton!
     @IBOutlet weak var editButton: UIButton!
     //main section View
     @IBOutlet weak var mainSectionView: UIView!
@@ -217,11 +216,6 @@ extension PersonalProfileViewController {
         //topView setup
         Utilities.profileStyleView(topView)
         
-        self.settingButton.setTitle("setting", for: .normal)
-        self.settingButton.contentMode = .scaleToFill
-        self.settingButton.tintColor = UIColor(named: "smallFontColor")
-        self.settingButton.titleLabel?.font = UIFont(name: "helvetica", size: 10)
-        
         self.editButton.setTitle("edit", for: .normal)
         self.editButton.contentMode = .scaleToFill
         self.editButton.tintColor = UIColor(named: "smallFontColor")
@@ -247,7 +241,7 @@ extension PersonalProfileViewController {
         self.statusIcon.tintColor = .systemYellow
         
         Utilities.profileInfoStyleLabel(statusLabel)
-        self.statusLabel.text = "여기다가 내가 쓰고 싶은 한 줄을 쓰면 됨."
+        self.statusLabel.text = "나를 소개하는 한 줄"
         self.statusLabel.contentMode = .center
         
         //basicSectionView setup

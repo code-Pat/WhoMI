@@ -60,7 +60,6 @@ class Personal3ViewController: UIViewController {
                 }
             }
         }
-        
         navigationController?.popToRootViewController(animated: true)
     }
     
