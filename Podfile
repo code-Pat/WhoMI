@@ -15,5 +15,6 @@ target 'WhoMI_Demo' do
   pod 'Firebase/Storage'
   pod 'RealmSwift', '~>10'
   pod 'TextFieldEffects'
+  pod 'IQKeyboardManagerSwift'
 
 end

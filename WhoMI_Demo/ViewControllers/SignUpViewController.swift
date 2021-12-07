@@ -26,14 +26,7 @@ class SignUpViewController: UIViewController {
         setUpElements()
         
     }
-    /*
-    override func viewWillAppear(_ animated: Bool) {
-        self.addKeyboardNotifications()
-    }
-    override func viewWillDisappear(_ animated: Bool) {
-        self.removeKeyboardNotifications()
-    }
-    */
+    
     @IBAction func signUpBtnClicked(_ sender: UIButton) {
         
         let error = validateFields()
@@ -53,7 +46,7 @@ class SignUpViewController: UIViewController {
                 
                 if err != nil {
                     
-                    self.showError("유저 생성에 에러가 있음.")
+                    self.showError("아이디는 이메일 형식을 지켜주세요.")
                     
                 } else {
                     
@@ -125,34 +118,4 @@ class SignUpViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         self.view.endEditing(true)
     }
-    /*
-    func addKeyboardNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification , object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-
-    }
-    
-    func removeKeyboardNotifications() {
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification , object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-
-    }
-    
-    @objc func keyboardWillShow(_ noti: NSNotification){
-        if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            let keyboardRectangle = keyboardFrame.cgRectValue
-            let keyboardHeight = keyboardRectangle.height
-            self.view.frame.origin.y -= keyboardHeight
-            
-        }
-    }
-    
-    @objc func keyboardWillHide(_ noti: NSNotification){
-        if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            let keyboardRectangle = keyboardFrame.cgRectValue
-            let keyboardHeight = keyboardRectangle.height
-            self.view.frame.origin.y += keyboardHeight
-        }
-    }
-     */
 }
