@@ -21,7 +21,6 @@ class HomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var workLabel: UILabel!
     @IBOutlet weak var mobileLabel: UILabel!
     
-   
     
     let db = Firestore.firestore()
     let storage = Storage.storage()

@@ -28,6 +28,11 @@ class HomeViewController: UIViewController {
         setUpViews()
         
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.collectionView.reloadData()
+    }
+    
     @IBAction func addBtnClicked(_ sender: UIButton) {
         guard let personalVC = self.storyboard?.instantiateViewController(withIdentifier: "personalVC") as? PersonalViewController else { return }
         self.navigationController?.pushViewController(personalVC, animated: true)

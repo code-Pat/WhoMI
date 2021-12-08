@@ -43,8 +43,8 @@ class Personal3ViewController: UIViewController {
         getDataToTextFields()
     }
     
-    @IBAction func saveBtnClicked(_ sender: UIButton) {
     
+    @IBAction func saveBtnClicked(_ sender: UIBarButtonItem) {
         let userAuth = Auth.auth().currentUser
         if let userAuth = userAuth {
             let docRef = db.collection("\(userAuth.uid)").document("ownerIntro")
