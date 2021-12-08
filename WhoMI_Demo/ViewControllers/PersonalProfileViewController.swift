@@ -221,7 +221,7 @@ extension PersonalProfileViewController {
         Utilities.profileStyleView(topView)
         
         self.editButton.setTitle("", for: .normal)
-        self.editButton.setImage(UIImage(systemName: "person"), for: .normal)
+        self.editButton.setImage(UIImage(systemName: "square.and.pencil"), for: .normal)
         self.editButton.contentMode = .scaleToFill
         self.editButton.tintColor = UIColor(named: "smallFontColor")
         self.editButton.titleLabel?.font = UIFont(name: "helvetica", size: 10)

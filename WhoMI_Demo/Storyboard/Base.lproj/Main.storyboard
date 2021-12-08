@@ -348,7 +348,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0a-oa-Nbg">
-                                <rect key="frame" x="80" y="208" width="254" height="200"/>
+                                <rect key="frame" x="80" y="188" width="254" height="200"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tDb-C8-H7J">
                                         <rect key="frame" x="0.0" y="0.0" width="254" height="200"/>
@@ -370,7 +370,7 @@
                             <constraint firstItem="1ko-ar-ka8" firstAttribute="leading" secondItem="t35-yv-RBZ" secondAttribute="leading" constant="40" id="4gh-oW-xpz"/>
                             <constraint firstItem="t35-yv-RBZ" firstAttribute="trailing" secondItem="D0a-oa-Nbg" secondAttribute="trailing" constant="80" id="8L7-z0-omv"/>
                             <constraint firstItem="t35-yv-RBZ" firstAttribute="bottom" secondItem="1ko-ar-ka8" secondAttribute="bottom" constant="80" id="HID-r5-ecM"/>
-                            <constraint firstItem="D0a-oa-Nbg" firstAttribute="top" secondItem="t35-yv-RBZ" secondAttribute="top" constant="120" id="e6q-Rh-IvU"/>
+                            <constraint firstItem="D0a-oa-Nbg" firstAttribute="top" secondItem="t35-yv-RBZ" secondAttribute="top" constant="100" id="e6q-Rh-IvU"/>
                             <constraint firstItem="t35-yv-RBZ" firstAttribute="trailing" secondItem="1ko-ar-ka8" secondAttribute="trailing" constant="40" id="tEH-mT-CmJ"/>
                             <constraint firstItem="D0a-oa-Nbg" firstAttribute="leading" secondItem="t35-yv-RBZ" secondAttribute="leading" constant="80" id="zp0-Xl-gpr"/>
                         </constraints>
@@ -2609,7 +2609,7 @@
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="sampleImage" width="500" height="336"/>
+        <image name="sampleImage" width="256" height="256"/>
         <namedColor name="backgroundColorCell">
             <color red="0.074509803921568626" green="0.074509803921568626" blue="0.074509803921568626" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

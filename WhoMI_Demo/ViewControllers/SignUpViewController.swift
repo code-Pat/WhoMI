@@ -23,6 +23,7 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.backgroundColor = UIColor(named: "backgroundColorA")
         setUpElements()
         
     }
@@ -111,7 +112,8 @@ class SignUpViewController: UIViewController {
         Utilities.styleFilledButton(signUpButton)
         
         self.imageView.image = UIImage(named: "sampleImage")
-        self.imageView.contentMode = .scaleToFill
+        self.imageView.contentMode = .scaleAspectFill
+        self.imageView.backgroundColor = UIColor(named: "backgroundColorA")
         
     }
     

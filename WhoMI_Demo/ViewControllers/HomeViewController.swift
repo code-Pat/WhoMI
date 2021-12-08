@@ -71,7 +71,7 @@ extension HomeViewController {
         Utilities.personalStyleView(sectionView)
         self.sectionView.layer.addBorder([.bottom], color: UIColor(named: "bigFontColor")!, width: 1.0)
         
-        self.addButton.setImage(UIImage(systemName: "plus"), for: .normal)
+        self.addButton.setImage(UIImage(systemName: "person"), for: .normal)
         self.addButton.setTitle("", for: .normal)
         self.addButton.contentMode = .scaleAspectFill
         self.addButton.tintColor = UIColor(named: "smallFontColor")

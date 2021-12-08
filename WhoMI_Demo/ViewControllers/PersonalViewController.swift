@@ -11,6 +11,8 @@ import FirebaseAuth
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 import FirebaseStorage
+import AVFoundation
+import Photos
 
 class PersonalViewController: UIViewController {
     
@@ -75,6 +77,8 @@ class PersonalViewController: UIViewController {
         
         self.imagePickerController.delegate = self
         self.imagePickerController.sourceType = .photoLibrary
+        checkCameraPermission()
+        checkAlbumPermission()
         present(self.imagePickerController, animated: true, completion: nil)
     }
     
@@ -178,6 +182,31 @@ class PersonalViewController: UIViewController {
                 
             }
         }
+    }
+    
+    func checkCameraPermission() {
+        AVCaptureDevice.requestAccess(for: .video) { (granted: Bool) in
+            if granted {
+                print("Camera: 권한 허용")
+            } else {
+                print("Camera: 권한 거부")
+            }
+        }
+    }
+    
+    func checkAlbumPermission() {
+        PHPhotoLibrary.requestAuthorization( {status in
+            switch status {
+            case .authorized:
+                print("Album: 권한 허용")
+            case .denied:
+                print("Album: 권한 거부")
+            case .restricted, .notDetermined:
+                print("Album: 선택하지 않음")
+            default:
+                break
+            }
+        })
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){

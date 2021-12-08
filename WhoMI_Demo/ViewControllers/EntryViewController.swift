@@ -27,6 +27,7 @@ class EntryViewController: UIViewController {
         Utilities.styleHollowButton(logInButton)
         self.imageView.image = UIImage(named: "sampleImage")
         self.imageView.contentMode = .scaleAspectFit
+        self.imageView.backgroundColor = UIColor(named: "backgroundColorA")
     }
     
 
