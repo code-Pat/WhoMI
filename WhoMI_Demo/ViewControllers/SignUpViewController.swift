@@ -46,7 +46,7 @@ class SignUpViewController: UIViewController {
                 
                 if err != nil {
                     
-                    self.showError("아이디는 이메일 형식을 지켜주세요.")
+                    self.showError("형식에 맞는 입력 값을 넣어주세요.")
                     
                 } else {
                     
