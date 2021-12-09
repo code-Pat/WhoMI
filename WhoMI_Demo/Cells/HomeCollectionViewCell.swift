@@ -32,12 +32,17 @@ class HomeCollectionViewCell: UICollectionViewCell {
         if let userAuth = userAuth {
             storage.reference(forURL: "gs://whomi-5734d.appspot.com/\(userAuth.uid)").downloadURL { (url, error) in
                 if let error = error {
-                    self.imageView.image = UIImage(named: "sampleImage")
+                    DispatchQueue.main.async {
+                        self.imageView.image = UIImage(named: "sampleImage")
+                    }
+                    
                     print("Error downloading an image...\(error.localizedDescription)")
                 } else {
                     let data = NSData(contentsOf: url!)
                     let image = UIImage(data: data! as Data)
-                    self.imageView.image = image
+                    DispatchQueue.main.async {
+                        self.imageView.image = image
+                    }
                 }
             }
             //get label data

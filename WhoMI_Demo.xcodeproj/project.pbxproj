@@ -11,7 +11,6 @@
 		6B109E26274D175C005F604E /* Personal3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B109E25274D175C005F604E /* Personal3ViewController.swift */; };
 		6B30E3C1274E4E5A0053AAC7 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B30E3C0274E4E5A0053AAC7 /* DataModel.swift */; };
 		6B30E3C3274FDBCB0053AAC7 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B30E3C2274FDBCA0053AAC7 /* UserData.swift */; };
-		6B30E3C7274FDCE80053AAC7 /* UserDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B30E3C6274FDCE80053AAC7 /* UserDB.swift */; };
 		6B680B6C2755F43400C359A5 /* HomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B680B6B2755F43400C359A5 /* HomeCollectionViewCell.swift */; };
 		6B7739F427429A3E0048B511 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7739F327429A3E0048B511 /* AppDelegate.swift */; };
 		6B7739F627429A3E0048B511 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7739F527429A3E0048B511 /* SceneDelegate.swift */; };
@@ -19,15 +18,9 @@
 		6B7739FD27429A460048B511 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B7739FC27429A460048B511 /* Assets.xcassets */; };
 		6B773A0027429A460048B511 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B7739FE27429A460048B511 /* LaunchScreen.storyboard */; };
 		6B773A0827452B460048B511 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A0727452B460048B511 /* HomeViewController.swift */; };
-		6B773A0A27452B500048B511 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A0927452B500048B511 /* AddViewController.swift */; };
 		6B773A0C27452B590048B511 /* PersonalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A0B27452B590048B511 /* PersonalViewController.swift */; };
 		6B773A0E27452B710048B511 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A0D27452B710048B511 /* OnboardingViewController.swift */; };
-		6B773A1027452B8E0048B511 /* ProfileCellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A0F27452B8E0048B511 /* ProfileCellViewController.swift */; };
 		6B773A1227452BA40048B511 /* PersonalProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A1127452BA40048B511 /* PersonalProfileViewController.swift */; };
-		6B773A1427452BB00048B511 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A1327452BB00048B511 /* SettingViewController.swift */; };
-		6B773A1627452BC70048B511 /* DeleteAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A1527452BC70048B511 /* DeleteAccountViewController.swift */; };
-		6B773A1827452BD20048B511 /* ResetPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A1727452BD20048B511 /* ResetPWViewController.swift */; };
-		6B773A1A27452BDF0048B511 /* ChangePNViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A1927452BDF0048B511 /* ChangePNViewController.swift */; };
 		6B773A1E27452D2A0048B511 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A1D27452D2A0048B511 /* LogInViewController.swift */; };
 		6B773A2027452D320048B511 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A1F27452D320048B511 /* SignUpViewController.swift */; };
 		6B773A222746239A0048B511 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A212746239A0048B511 /* UIView+Extension.swift */; };
@@ -48,7 +41,6 @@
 		6B109E25274D175C005F604E /* Personal3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Personal3ViewController.swift; sourceTree = "<group>"; };
 		6B30E3C0274E4E5A0053AAC7 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		6B30E3C2274FDBCA0053AAC7 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
-		6B30E3C6274FDCE80053AAC7 /* UserDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDB.swift; sourceTree = "<group>"; };
 		6B680B6B2755F43400C359A5 /* HomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		6B7739F027429A3E0048B511 /* WhoMI_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoMI_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B7739F327429A3E0048B511 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,15 +50,9 @@
 		6B7739FF27429A460048B511 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B773A0127429A460048B511 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6B773A0727452B460048B511 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		6B773A0927452B500048B511 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		6B773A0B27452B590048B511 /* PersonalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalViewController.swift; sourceTree = "<group>"; };
 		6B773A0D27452B710048B511 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		6B773A0F27452B8E0048B511 /* ProfileCellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCellViewController.swift; sourceTree = "<group>"; };
 		6B773A1127452BA40048B511 /* PersonalProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalProfileViewController.swift; sourceTree = "<group>"; };
-		6B773A1327452BB00048B511 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		6B773A1527452BC70048B511 /* DeleteAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountViewController.swift; sourceTree = "<group>"; };
-		6B773A1727452BD20048B511 /* ResetPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPWViewController.swift; sourceTree = "<group>"; };
-		6B773A1927452BDF0048B511 /* ChangePNViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePNViewController.swift; sourceTree = "<group>"; };
 		6B773A1D27452D2A0048B511 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		6B773A1F27452D320048B511 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		6B773A212746239A0048B511 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -105,7 +91,6 @@
 		6B30E3C5274FDC890053AAC7 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				6B30E3C6274FDCE80053AAC7 /* UserDB.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -156,16 +141,10 @@
 				6B773A1F27452D320048B511 /* SignUpViewController.swift */,
 				6B773A1D27452D2A0048B511 /* LogInViewController.swift */,
 				6B773A0727452B460048B511 /* HomeViewController.swift */,
-				6B773A0927452B500048B511 /* AddViewController.swift */,
 				6B773A0B27452B590048B511 /* PersonalViewController.swift */,
 				6B109E23274D12BC005F604E /* Personal2ViewController.swift */,
 				6B109E25274D175C005F604E /* Personal3ViewController.swift */,
 				6B773A1127452BA40048B511 /* PersonalProfileViewController.swift */,
-				6B773A0F27452B8E0048B511 /* ProfileCellViewController.swift */,
-				6B773A1327452BB00048B511 /* SettingViewController.swift */,
-				6B773A1527452BC70048B511 /* DeleteAccountViewController.swift */,
-				6B773A1727452BD20048B511 /* ResetPWViewController.swift */,
-				6B773A1927452BDF0048B511 /* ChangePNViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -360,21 +339,14 @@
 				6B773A24274624770048B511 /* OnboardingSlide.swift in Sources */,
 				6B773A0C27452B590048B511 /* PersonalViewController.swift in Sources */,
 				6BC50A7C27551FF900641598 /* UIColor+Extension.swift in Sources */,
-				6B773A1027452B8E0048B511 /* ProfileCellViewController.swift in Sources */,
-				6B773A1627452BC70048B511 /* DeleteAccountViewController.swift in Sources */,
 				6B773A1E27452D2A0048B511 /* LogInViewController.swift in Sources */,
-				6B773A1427452BB00048B511 /* SettingViewController.swift in Sources */,
 				6B773A2027452D320048B511 /* SignUpViewController.swift in Sources */,
 				6BF9EBCE2747751000629858 /* Utilities.swift in Sources */,
 				6B109E24274D12BC005F604E /* Personal2ViewController.swift in Sources */,
-				6B30E3C7274FDCE80053AAC7 /* UserDB.swift in Sources */,
 				6B7739F627429A3E0048B511 /* SceneDelegate.swift in Sources */,
 				6BF9EBD32747C61100629858 /* Constants.swift in Sources */,
 				6B30E3C3274FDBCB0053AAC7 /* UserData.swift in Sources */,
 				6BC50A7E27552BF400641598 /* CALayer+Extension.swift in Sources */,
-				6B773A0A27452B500048B511 /* AddViewController.swift in Sources */,
-				6B773A1827452BD20048B511 /* ResetPWViewController.swift in Sources */,
-				6B773A1A27452BDF0048B511 /* ChangePNViewController.swift in Sources */,
 				6B773A0827452B460048B511 /* HomeViewController.swift in Sources */,
 				6B30E3C1274E4E5A0053AAC7 /* DataModel.swift in Sources */,
 			);

@@ -206,18 +206,22 @@ class PersonalViewController: UIViewController {
         if let userAuth = userAuth {
             storage.reference(forURL: "gs://whomi-5734d.appspot.com/\(userAuth.uid)").downloadURL { (url, error) in
                 if let error = error {
-                    imgView.image = UIImage(named: "sampleImage")
+                    DispatchQueue.main.async {
+                        imgView.image = UIImage(named: "sampleImage")
+                    }
                     print("Error downloading an image...\(error.localizedDescription)")
                 } else {
                     let data = NSData(contentsOf: url!)
                     let image = UIImage(data: data! as Data)
-                    imgView.image = image
+                    DispatchQueue.main.async {
+                        self.imageView.image = image
+                    }
                 }
                 
             }
         }
     }
-    
+    /*
     func checkCameraPermission() {
         AVCaptureDevice.requestAccess(for: .video) { (granted: Bool) in
             if granted {
@@ -242,7 +246,7 @@ class PersonalViewController: UIViewController {
             }
         })
     }
-    
+    */
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         self.view.endEditing(true)
     }
