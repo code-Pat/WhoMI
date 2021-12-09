@@ -166,7 +166,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iW7-0E-JRq">
-                                <rect key="frame" x="80" y="188" width="254" height="350"/>
+                                <rect key="frame" x="80" y="217.5" width="254" height="350"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="61W-ee-kzC">
                                         <rect key="frame" x="0.0" y="0.0" width="254" height="350"/>
@@ -185,9 +185,9 @@
                         <viewLayoutGuide key="safeArea" id="PPm-oL-fEL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hJX-Pe-ZU7" firstAttribute="top" secondItem="iW7-0E-JRq" secondAttribute="bottom" constant="100" id="9Yy-96-kWm"/>
                             <constraint firstItem="PPm-oL-fEL" firstAttribute="trailing" secondItem="hJX-Pe-ZU7" secondAttribute="trailing" constant="40" id="HEu-uH-3LH"/>
                             <constraint firstAttribute="bottom" secondItem="hJX-Pe-ZU7" secondAttribute="bottom" constant="120" id="MU0-CW-4LG"/>
-                            <constraint firstItem="iW7-0E-JRq" firstAttribute="top" secondItem="PPm-oL-fEL" secondAttribute="top" constant="100" id="Png-xU-ZXz"/>
                             <constraint firstItem="iW7-0E-JRq" firstAttribute="leading" secondItem="PPm-oL-fEL" secondAttribute="leading" constant="80" id="R6i-8Z-4Gr"/>
                             <constraint firstItem="hJX-Pe-ZU7" firstAttribute="leading" secondItem="PPm-oL-fEL" secondAttribute="leading" constant="40" id="un9-cD-XU8"/>
                             <constraint firstItem="PPm-oL-fEL" firstAttribute="trailing" secondItem="iW7-0E-JRq" secondAttribute="trailing" constant="80" id="ww4-Ti-Voq"/>

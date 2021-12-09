@@ -99,11 +99,6 @@ class PersonalProfileViewController: UIViewController {
         self.navigationController?.pushViewController(personalVC, animated: true)
     }
     
-    @IBAction func settingBtnClicked(_ sender: UIButton) {
-        guard let settingVC = self.storyboard?.instantiateViewController(withIdentifier: "settingVC") as? SettingViewController else { return }
-        self.navigationController?.pushViewController(settingVC, animated: true)
-    }
-    
     func getImageData() {
         let userAuth = Auth.auth().currentUser
         if let userAuth = userAuth {
