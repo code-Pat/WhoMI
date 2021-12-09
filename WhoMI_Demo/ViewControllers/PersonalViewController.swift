@@ -66,7 +66,7 @@ class PersonalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        imagePickerController.delegate = self
         setUpViews()
         getDataToTextFields()
         downloadImage(imgView: imageView)
@@ -74,13 +74,39 @@ class PersonalViewController: UIViewController {
     
     
     @IBAction func uploadImgBtnClicked(_ sender: UIButton) {
-        
+        /*
         self.imagePickerController.delegate = self
         self.imagePickerController.sourceType = .photoLibrary
         checkCameraPermission()
         checkAlbumPermission()
         present(self.imagePickerController, animated: true, completion: nil)
+         */
+        
+        self.imagePickerController.sourceType = .photoLibrary
+        self.present(self.imagePickerController, animated: true, completion: nil)
     }
+    
+    func checkPermissions() {
+        if PHPhotoLibrary.authorizationStatus() != PHAuthorizationStatus.authorized {
+            PHPhotoLibrary.requestAuthorization({ (status: PHAuthorizationStatus) -> Void in ()})
+        }
+        if PHPhotoLibrary.authorizationStatus() == PHAuthorizationStatus.authorized {
+            
+        } else {
+            PHPhotoLibrary.requestAuthorization(requestAuthorizationHandler)
+        }
+    }
+    
+    func requestAuthorizationHandler(status: PHAuthorizationStatus) {
+        if PHPhotoLibrary.authorizationStatus() == PHAuthorizationStatus.authorized {
+            print("access granted to use photo album")
+        }
+        else {
+            print("access not granted to use photo album")
+        }
+    }
+    
+    
     
     @IBAction func nextBtnClicked(_ sender: UIButton) {
         let userAuth = Auth.auth().currentUser
@@ -306,8 +332,14 @@ extension PersonalViewController {
 extension PersonalViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        /*
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageView.image = image
+        }
+        picker.dismiss(animated: true, completion: nil)
+         */
+        if picker.sourceType == .photoLibrary {
+            imageView?.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         }
         picker.dismiss(animated: true, completion: nil)
     }
@@ -315,4 +347,13 @@ extension PersonalViewController: UIImagePickerControllerDelegate, UINavigationC
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
+         
 }
+/*
+func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    
+    if picker.sourceType == .photoLibrary {
+        imageView?.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+    }
+}
+*/

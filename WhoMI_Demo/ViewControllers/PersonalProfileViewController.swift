@@ -141,7 +141,7 @@ class PersonalProfileViewController: UIViewController {
                     self?.nameLabel.text = name
                     self?.birthDateInfoLabel.text = birthDate
                     self?.genderInfoLabel.text = gender
-                    self?.workPhoneInfoLabel.text = phoneNumber
+                    self?.mobileInfoLabel.text = phoneNumber
                     self?.emailInfoLabel.text = email
                     self?.addressInfoLabel.text = address
                 }
