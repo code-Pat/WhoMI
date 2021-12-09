@@ -12,9 +12,10 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 import FirebaseStorage
 import AVFoundation
-import Photos
+import PhotosUI
 
 class PersonalViewController: UIViewController {
+    
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var entireView: UIView!
@@ -66,10 +67,11 @@ class PersonalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imagePickerController.delegate = self
+        //imagePickerController.delegate = self
         setUpViews()
         getDataToTextFields()
         downloadImage(imgView: imageView)
+        
     }
     
     
@@ -81,11 +83,17 @@ class PersonalViewController: UIViewController {
         checkAlbumPermission()
         present(self.imagePickerController, animated: true, completion: nil)
          */
+        var configuration = PHPickerConfiguration()
+        configuration.selectionLimit = 1
+        configuration.filter = .images
         
-        self.imagePickerController.sourceType = .photoLibrary
-        self.present(self.imagePickerController, animated: true, completion: nil)
+        let picker = PHPickerViewController(configuration: configuration)
+        picker.delegate = self
+        self.present(picker, animated: true, completion: nil)
+        
     }
     
+    /*
     func checkPermissions() {
         if PHPhotoLibrary.authorizationStatus() != PHAuthorizationStatus.authorized {
             PHPhotoLibrary.requestAuthorization({ (status: PHAuthorizationStatus) -> Void in ()})
@@ -105,7 +113,7 @@ class PersonalViewController: UIViewController {
             print("access not granted to use photo album")
         }
     }
-    
+    */
     
     
     @IBAction func nextBtnClicked(_ sender: UIButton) {
@@ -329,6 +337,22 @@ extension PersonalViewController {
     }
 }
 
+extension PersonalViewController: PHPickerViewControllerDelegate {
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        picker.dismiss(animated: true, completion: nil)
+        
+        let itemProvider = results.first?.itemProvider
+        if let itemProvider = itemProvider,
+           itemProvider.canLoadObject(ofClass: UIImage.self) {
+                itemProvider.loadObject(ofClass: UIImage.self) { image, error in
+                    DispatchQueue.main.async {
+                        self.imageView.image = image as? UIImage
+                }
+            }
+        }
+    }
+}
+/*
 extension PersonalViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -349,6 +373,7 @@ extension PersonalViewController: UIImagePickerControllerDelegate, UINavigationC
     }
          
 }
+ */
 /*
 func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
     
