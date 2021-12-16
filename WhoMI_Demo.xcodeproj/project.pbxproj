@@ -501,6 +501,8 @@
 				DEVELOPMENT_TEAM = NA8HN478WA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WhoMI_Demo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WhoMI;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Choose a profile picture from iPhone photo album";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -532,6 +534,8 @@
 				DEVELOPMENT_TEAM = NA8HN478WA;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WhoMI_Demo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = WhoMI;
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Choose a profile picture from iPhone photo album";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
