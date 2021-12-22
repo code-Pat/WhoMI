@@ -13,13 +13,10 @@
 * WhoMI에서 추구하는 "나"는 내가 보여주고 싶은 진짜 "나"이고, 개인의 직종, 직군, 관심 분야나 어필하고 싶은 방향에 따라 얼마든지 자유롭게 나를 표출할 수 있는 서비스이다.
 
 ## Frameworks & libraries & api
-* [Firebase] 와 구글 제공 클라우드를 통한 회원 정보 관리 및 로그인 기능 구현
-* [Realm] 을 통한 앱 내의 데이터 관리 및 CRUD
-* [Alamofire] 을 통한 서버 통신과 api 구현
-* [Toast] 을 이용한 앱 내 알림 구현
-* [Fastlane] 을 활용한 빌드, 앱스토어 업로드 및 배포
-* [Twilio programmable sms api] 를 이용한 휴대폰 sms 인증 구현 (미정)
-* [Kingfisher] 을 이용한 web으로부터의 이미지 관리와 캐싱 (미정)
+* [Firebase] Auth를 이용해 로그인과 회원가입 기능 구현
+* [Firebase] FireStore을 이용해 유저 데이터 클라우드 저장 구현
+* [Firebase] Storage를 이용해 유저 프로필 사진/이미지 클라우드 저장 구현
+* [IQKeyboardManager] textfields 입력 시 자동으로 키보드와 뷰의 높이 계산 및 키보드 가림 문제 해결
 
 
 ## 프로젝트 계획
@@ -337,3 +334,10 @@
 **Project**
 
 * 유저의 아이폰 앨범에 접근 권한 alert과 앨범 이용 코드 수정
+
+
+
+## Updates
+
+
+
