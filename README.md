@@ -92,6 +92,10 @@
 
 ---
 
+#### Second submission - Accepted (21.12.18)
+- 출시 성공!!
+
+---
 
 
 
