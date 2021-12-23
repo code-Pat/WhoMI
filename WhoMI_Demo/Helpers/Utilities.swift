@@ -123,4 +123,20 @@ class Utilities {
     
 }
 
+// UILabel 터치시 클립보드 복사 (github, blog, youtube, website 라벨에만 적용)
+extension UILabel {
+     func enableCopyOnTouch() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(labelTapped(sender:)))
+        self.isUserInteractionEnabled = true
+        self.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func labelTapped(sender: UITapGestureRecognizer) {
+        guard let label = sender.view as? UILabel else {
+            return
+        }
+        UIPasteboard.general.string = label.text
+    }
+}
+
 
