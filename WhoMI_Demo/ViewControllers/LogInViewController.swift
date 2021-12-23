@@ -24,6 +24,11 @@ class LogInViewController: UIViewController {
 
     }
     
+    func showError(_ message: String) {
+        errorLabel.text = message
+        errorLabel.alpha = 1
+    }
+    
     @IBAction func logInBtnClicked(_ sender: UIButton) {
         // 빈칸 없게 만들기
         
@@ -34,8 +39,7 @@ class LogInViewController: UIViewController {
             
             if error != nil {
                 
-                self.errorLabel.text = error!.localizedDescription
-                self.errorLabel.alpha = 1
+                self.showError("아이디 혹은 비밀번호가 틀렸습니다")
                 
             } else {
                 

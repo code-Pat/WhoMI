@@ -46,7 +46,7 @@ class SignUpViewController: UIViewController {
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 
                 if err != nil {
-                    
+                    // 아이디 칸에 email주소 형식으로 입력하지 않은 경우.
                     self.showError("형식에 맞는 입력 값을 넣어주세요.")
                     
                 } else {
@@ -86,12 +86,12 @@ class SignUpViewController: UIViewController {
             emailTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
             passwordTextField.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
         {
-            
+            // 빈칸이 하나라도 존재하는 경우
             return "모든 칸을 채워주세요."
         }
         
         let cleanPassword = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
-        
+        // 비밀번호 형식이 지켜지지 않은 경우.
         if Utilities.isPasswordValid(cleanPassword) == false {
             return "비밀번호를 다시 입력해주세요."
         }
