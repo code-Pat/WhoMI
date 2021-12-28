@@ -363,3 +363,10 @@
 #### **21.12.23(목)**
 * 로그인, 회원가입시 뜨는 에러문구 수정
 * 링크를 포함하는 label 클릭시 클립보드로 복사되는 기능 추가
+
+---
+
+#### **21.12.28(화)**
+* SnapKit 추가 (cocoa pod)
+* QR code generator 구현 -> 해당 유저의 firestore uid를 담고있는 qr 코드를 생성 / 추후 친구 추가 및 공유를 위한 기능
+* QRCodeViewController 추가 -> PersonalProfileViewController에 qr버튼 추가 및 버튼 클릭시 QRCodeViewController가 present로 열림 / QRCodeViewController는 QR code만 보여주는 역할
