@@ -21,6 +21,7 @@ class PersonalProfileViewController: UIViewController {
     //top View
     @IBOutlet weak var topView: UIView!
     @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var qrButton: UIButton!
     //main section View
     @IBOutlet weak var mainSectionView: UIView!
     @IBOutlet weak var mainSectionLabel: UILabel!
@@ -220,6 +221,12 @@ extension PersonalProfileViewController {
         
         //topView setup
         Utilities.profileStyleView(topView)
+        
+        self.qrButton.setTitle("", for: .normal)
+        self.qrButton.setImage(UIImage(systemName: "qrcode"), for: .normal)
+        self.qrButton.contentMode = .scaleToFill
+        self.qrButton.tintColor = UIColor(named: "smallFontColor")
+        self.qrButton.titleLabel?.font = UIFont(name: "helvetica", size: 10)
         
         self.editButton.setTitle("", for: .normal)
         self.editButton.setImage(UIImage(systemName: "square.and.pencil"), for: .normal)

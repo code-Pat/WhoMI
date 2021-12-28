@@ -26,6 +26,8 @@
 		6B773A222746239A0048B511 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A212746239A0048B511 /* UIView+Extension.swift */; };
 		6B773A24274624770048B511 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A23274624760048B511 /* OnboardingSlide.swift */; };
 		6B773A26274626340048B511 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B773A25274626340048B511 /* OnboardingCell.swift */; };
+		6B8AE748277AF31600F0DCA9 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AE747277AF31600F0DCA9 /* QRCodeViewController.swift */; };
+		6B8AE74A277AF42100F0DCA9 /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AE749277AF42100F0DCA9 /* QRCodeView.swift */; };
 		6BC50A7C27551FF900641598 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC50A7B27551FF900641598 /* UIColor+Extension.swift */; };
 		6BC50A7E27552BF400641598 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC50A7D27552BF400641598 /* CALayer+Extension.swift */; };
 		6BF9EBCC27476E7C00629858 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF9EBCB27476E7C00629858 /* EntryViewController.swift */; };
@@ -58,6 +60,8 @@
 		6B773A212746239A0048B511 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		6B773A23274624760048B511 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		6B773A25274626340048B511 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		6B8AE747277AF31600F0DCA9 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		6B8AE749277AF42100F0DCA9 /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
 		6BC50A7B27551FF900641598 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		6BC50A7D27552BF400641598 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
 		6BF9EBCB27476E7C00629858 /* EntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryViewController.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 				6B109E23274D12BC005F604E /* Personal2ViewController.swift */,
 				6B109E25274D175C005F604E /* Personal3ViewController.swift */,
 				6B773A1127452BA40048B511 /* PersonalProfileViewController.swift */,
+				6B8AE747277AF31600F0DCA9 /* QRCodeViewController.swift */,
+				6B8AE749277AF42100F0DCA9 /* QRCodeView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -330,6 +336,7 @@
 			files = (
 				6B773A26274626340048B511 /* OnboardingCell.swift in Sources */,
 				6B7739F427429A3E0048B511 /* AppDelegate.swift in Sources */,
+				6B8AE748277AF31600F0DCA9 /* QRCodeViewController.swift in Sources */,
 				6B773A0E27452B710048B511 /* OnboardingViewController.swift in Sources */,
 				6B773A1227452BA40048B511 /* PersonalProfileViewController.swift in Sources */,
 				6B109E26274D175C005F604E /* Personal3ViewController.swift in Sources */,
@@ -337,6 +344,7 @@
 				6BF9EBCC27476E7C00629858 /* EntryViewController.swift in Sources */,
 				6B680B6C2755F43400C359A5 /* HomeCollectionViewCell.swift in Sources */,
 				6B773A24274624770048B511 /* OnboardingSlide.swift in Sources */,
+				6B8AE74A277AF42100F0DCA9 /* QRCodeView.swift in Sources */,
 				6B773A0C27452B590048B511 /* PersonalViewController.swift in Sources */,
 				6BC50A7C27551FF900641598 /* UIColor+Extension.swift in Sources */,
 				6B773A1E27452D2A0048B511 /* LogInViewController.swift in Sources */,

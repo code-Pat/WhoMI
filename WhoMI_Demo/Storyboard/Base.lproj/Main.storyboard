@@ -1002,10 +1002,21 @@
                                                                     <action selector="editBtnClicked:" destination="W5A-Gm-8ha" eventType="touchUpInside" id="cdT-92-oFB"/>
                                                                 </connections>
                                                             </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfk-cA-nDE">
+                                                                <rect key="frame" x="264" y="10" width="60" height="30"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="30" id="5cT-uK-VoO"/>
+                                                                    <constraint firstAttribute="width" constant="60" id="QUC-fP-Lcx"/>
+                                                                </constraints>
+                                                                <state key="normal" title="Button"/>
+                                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                            </button>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <constraints>
+                                                            <constraint firstItem="pb7-Q2-bYX" firstAttribute="leading" secondItem="hfk-cA-nDE" secondAttribute="trailing" constant="10" id="MK0-d4-lsD"/>
                                                             <constraint firstAttribute="trailing" secondItem="pb7-Q2-bYX" secondAttribute="trailing" constant="20" id="N6u-p9-DfR"/>
+                                                            <constraint firstItem="hfk-cA-nDE" firstAttribute="centerY" secondItem="pb7-Q2-bYX" secondAttribute="centerY" id="ZW3-MK-VM5"/>
                                                             <constraint firstAttribute="height" constant="50" id="azO-M9-Jzq"/>
                                                             <constraint firstItem="pb7-Q2-bYX" firstAttribute="top" secondItem="f01-CE-WZK" secondAttribute="top" constant="10" id="zYG-TH-aM2"/>
                                                         </constraints>
@@ -1631,6 +1642,7 @@
                         <outlet property="mobileInfoLabel" destination="Cts-hc-LJQ" id="59e-uQ-im9"/>
                         <outlet property="mobileLabel" destination="XXi-Gi-7e2" id="Rl6-8H-1dr"/>
                         <outlet property="nameLabel" destination="hde-i8-clE" id="Dlt-ET-OBa"/>
+                        <outlet property="qrButton" destination="hfk-cA-nDE" id="yD5-gR-Ptu"/>
                         <outlet property="scrollView" destination="ZOt-xK-Q9g" id="uym-ot-vEg"/>
                         <outlet property="stackView" destination="93t-Zd-KyL" id="J4O-79-Ahu"/>
                         <outlet property="statusIcon" destination="obt-9o-YdZ" id="tU5-ll-kkb"/>
