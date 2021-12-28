@@ -83,7 +83,6 @@ class PersonalProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         setUpViews()
         getImageData()
         getEssentialData()
@@ -93,6 +92,11 @@ class PersonalProfileViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         getImageData()
+    }
+    
+    @IBAction func qrBtnClicked(_ sender: UIButton) {
+        guard let qrVC = self.storyboard?.instantiateViewController(withIdentifier: "qrcodeVC") as? QRCodeViewController else { return }
+        self.present(qrVC, animated: true, completion: nil)
     }
     
     @IBAction func editBtnClicked(_ sender: UIButton) {

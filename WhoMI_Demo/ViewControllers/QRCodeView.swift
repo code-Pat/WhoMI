@@ -5,7 +5,7 @@
 //  Created by Donggeun Lee on 2021/12/28.
 //
 
-import Foundation
+import UIKit
 import SwiftUI
 import CoreImage.CIFilterBuiltins
 import FirebaseAuth
