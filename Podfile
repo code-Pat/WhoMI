@@ -16,5 +16,6 @@ target 'WhoMI_Demo' do
   pod 'RealmSwift', '~>10'
   pod 'TextFieldEffects'
   pod 'IQKeyboardManagerSwift'
+  pod 'SnapKit', '~> 5.0.0'
 
 end
