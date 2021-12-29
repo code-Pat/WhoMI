@@ -375,7 +375,8 @@
 ---
 
 #### **21.12.29(수)**
-* QRCodeView: [SwiftUI]를 이용해 해당 유저의 userAuth.uid를 담은 qr code를 생성하는 뷰
-* QRCodeViewController: [SwiftUI]를 이용해 위에 생성한 QRCodeView를 불러와 화면상에 보여주는 viewcontroller -> PersonalProfileViewController 상단의 qr모양 버튼 클릭시 present 방식으로 화면 전환이 되면서 qr코드를 보여줌. -> 추후 친구 추가 등의 기능을 위한 qr code
-* QRCode관련한 코드들이 SwiftUI의 CoreImage 를 이용해 구현되었고, UIKit으로 만들어진 PersonalProfileViewController에서 해당 QR뷰로 넘어가기 위해서 UIHostingController를 이용하였다. UIKit버전에서 SwiftUI코드 뷰로 화면전환이 생길 때 UIHostingController를 이용하면 매우 용이하게 전환될 수 있다.
+* [SwiftUI] QRCodeView: 해당 유저의 userAuth.uid를 담은 qr code를 생성하는 뷰
+* [SwiftUI] QRCodeViewController: [SwiftUI]를 이용해 위에 생성한 QRCodeView를 불러와 화면상에 보여주는 viewcontroller -> PersonalProfileViewController 상단의 qr모양 버튼 클릭시 present 방식으로 화면 전환이 되면서 qr코드를 보여줌. -> 추후 친구 추가 등의 기능을 위한 qr code
+* QRCode관련한 코드들이 SwiftUI의 CoreImage 를 이용해 구현되었고, UIKit으로 만들어진 PersonalProfileViewController에서 해당 QR뷰로 넘어가기 위해서 UIHostingController를 이용하였다. UIKit버전에서 SwiftUI코드 뷰로 화면전환이 생길 때 UIHostingController를 이용하면 매우 용이하게 전환될 수 있다
+* [SwiftUI] QRCodeScanner: Home 화면 상단에 친구추가 버튼 추가 및 버튼 클릭시 카메라창이 present 방식으로 화면 전환되어 QR코드를 스캔할 수 있게해줌
 
