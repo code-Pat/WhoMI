@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class HomeViewController: UIViewController {
     
@@ -40,6 +41,8 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func friendBtnClicked(_ sender: UIButton) {
+        let qrScannerVC = UIHostingController(rootView: QRScannerView())
+        present(qrScannerVC, animated: true)
     }
 }
 
