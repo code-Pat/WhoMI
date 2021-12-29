@@ -5,7 +5,7 @@
 //  Created by Donggeun Lee on 2021/12/28.
 //
 
-import UIKit
+import Foundation
 import SwiftUI
 import CoreImage.CIFilterBuiltins
 import FirebaseAuth
@@ -20,7 +20,7 @@ struct QRCodeView: View {
         Image(uiImage: generateQRCodeImage())
             .interpolation(.none)
             .resizable()
-            .frame(width: 200, height: 200, alignment: .center)
+            .frame(width: 150, height: 150, alignment: .center)
     }
     
     func generateQRCodeImage() -> UIImage {

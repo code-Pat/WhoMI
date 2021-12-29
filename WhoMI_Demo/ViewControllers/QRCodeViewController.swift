@@ -5,7 +5,28 @@
 //  Created by Donggeun Lee on 2021/12/28.
 //
 
-import UIKit
+import Foundation
+import SwiftUI
+
+struct QRCodeViewController: View {
+    var body: some View {
+        VStack {
+            
+            QRCodeView()
+            Text("프로필 공유를 위해 위 QR코드를 이용하세요")
+        }
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        QRCodeViewController()
+    }
+}
+
+
+
+/*
 import SnapKit
 
 class QRCodeViewController: UIViewController {
@@ -31,3 +52,4 @@ class QRCodeViewController: UIViewController {
     
 
 }
+*/

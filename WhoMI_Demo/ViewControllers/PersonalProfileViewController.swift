@@ -11,6 +11,7 @@ import FirebaseAuth
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 import FirebaseStorage
+import SwiftUI
 
 class PersonalProfileViewController: UIViewController {
     
@@ -95,9 +96,12 @@ class PersonalProfileViewController: UIViewController {
     }
     
     @IBAction func qrBtnClicked(_ sender: UIButton) {
-        guard let qrVC = self.storyboard?.instantiateViewController(withIdentifier: "qrcodeVC") as? QRCodeViewController else { return }
-        self.present(qrVC, animated: true, completion: nil)
+//        guard let qrVC = self.storyboard?.instantiateViewController(withIdentifier: "qrcodeVC") as? QRCodeViewController else { return }
+//        self.present(qrVC, animated: true, completion: nil)
+        let qrVC = UIHostingController(rootView: QRCodeViewController())
+        present(qrVC, animated: true)
     }
+     
     
     @IBAction func editBtnClicked(_ sender: UIButton) {
         guard let personalVC = self.storyboard?.instantiateViewController(withIdentifier: "personalVC") as? PersonalViewController else { return }
