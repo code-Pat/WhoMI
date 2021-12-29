@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var sectionView: UIView!
     @IBOutlet weak var sectionLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var friendButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,9 @@ class HomeViewController: UIViewController {
     @IBAction func addBtnClicked(_ sender: UIButton) {
         guard let personalVC = self.storyboard?.instantiateViewController(withIdentifier: "personalVC") as? PersonalViewController else { return }
         self.navigationController?.pushViewController(personalVC, animated: true)
+    }
+    
+    @IBAction func friendBtnClicked(_ sender: UIButton) {
     }
 }
 
@@ -75,6 +79,11 @@ extension HomeViewController {
         self.addButton.setTitle("", for: .normal)
         self.addButton.contentMode = .scaleAspectFill
         self.addButton.tintColor = UIColor(named: "smallFontColor")
+        
+        self.friendButton.setImage(UIImage(systemName: "qrcode.viewfinder"), for: .normal)
+        self.friendButton.setTitle("", for: .normal)
+        self.friendButton.contentMode = .scaleAspectFill
+        self.friendButton.tintColor = UIColor(named: "smallFontColor")
         
         self.sectionLabel.text = "전체"
         Utilities.personalSectionStyleLabel(sectionLabel)

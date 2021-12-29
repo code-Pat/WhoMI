@@ -420,12 +420,26 @@
                                             <action selector="addBtnClicked:" destination="Tos-LQ-0LM" eventType="touchUpInside" id="uS0-dV-bye"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQd-cs-6DK">
+                                        <rect key="frame" x="304" y="15" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="cIN-ZQ-hs2"/>
+                                            <constraint firstAttribute="height" constant="40" id="uHK-42-Gpm"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                        <connections>
+                                            <action selector="friendBtnClicked:" destination="Tos-LQ-0LM" eventType="touchUpInside" id="GKa-6e-Gag"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="8hW-4B-brW"/>
                                     <constraint firstItem="Uho-ub-VVC" firstAttribute="centerY" secondItem="Wg8-kx-P2b" secondAttribute="centerY" id="AX2-lX-lAH"/>
                                     <constraint firstAttribute="trailing" secondItem="Uho-ub-VVC" secondAttribute="trailing" constant="20" id="Ru8-b1-ysx"/>
+                                    <constraint firstItem="Uho-ub-VVC" firstAttribute="centerY" secondItem="QQd-cs-6DK" secondAttribute="centerY" id="XGx-sT-Kwb"/>
+                                    <constraint firstItem="Uho-ub-VVC" firstAttribute="leading" secondItem="QQd-cs-6DK" secondAttribute="trailing" constant="10" id="Y4w-r2-vDi"/>
                                     <constraint firstAttribute="bottom" secondItem="MPn-Wf-Hez" secondAttribute="bottom" constant="10" id="mrN-H9-pwZ"/>
                                     <constraint firstItem="MPn-Wf-Hez" firstAttribute="top" secondItem="Wg8-kx-P2b" secondAttribute="top" constant="10" id="ooU-e3-d7X"/>
                                     <constraint firstItem="MPn-Wf-Hez" firstAttribute="leading" secondItem="Wg8-kx-P2b" secondAttribute="leading" constant="20" id="zw0-3s-ZNx"/>
@@ -530,6 +544,7 @@
                     <connections>
                         <outlet property="addButton" destination="Uho-ub-VVC" id="2rd-83-Jei"/>
                         <outlet property="collectionView" destination="4uM-jD-4Ye" id="Z57-Rd-0VP"/>
+                        <outlet property="friendButton" destination="QQd-cs-6DK" id="jnP-JR-xeL"/>
                         <outlet property="sectionLabel" destination="MPn-Wf-Hez" id="eIt-If-l6V"/>
                         <outlet property="sectionView" destination="Wg8-kx-P2b" id="f8g-4e-jQh"/>
                     </connections>
@@ -552,7 +567,6 @@
                     <connections>
                         <segue destination="KJI-Ef-89q" kind="relationship" relationship="viewControllers" id="w8d-Ag-gPP"/>
                         <segue destination="mj9-h3-7Xt" kind="relationship" relationship="viewControllers" id="VrO-bT-aMK"/>
-                        <segue destination="67u-Su-If1" kind="relationship" relationship="viewControllers" id="HFx-TA-Cyl"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TZa-XH-n21" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1668,22 +1682,6 @@
             </objects>
             <point key="canvasLocation" x="3841" y="1873"/>
         </scene>
-        <!--Add View Controller-->
-        <scene sceneID="lqo-dN-myT">
-            <objects>
-                <viewController id="n3a-U1-aa5" customClass="AddViewController" customModule="WhoMI_Demo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Tr4-oo-LLI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="mhW-MU-AaT"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="zok-Kd-bq2"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fCY-D4-OGS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3842" y="1047"/>
-        </scene>
         <!--Setting View Controller-->
         <scene sceneID="OHB-4T-z6C">
             <objects>
@@ -2650,25 +2648,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SPg-2D-VfA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6799" y="1873"/>
-        </scene>
-        <!--Item-->
-        <scene sceneID="iOZ-hi-Bxp">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="67u-Su-If1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Cov-Jk-gN4"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5wQ-Vu-j64">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="n3a-U1-aa5" kind="relationship" relationship="rootViewController" id="2fn-wz-z9G"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tZP-Mw-kBj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2930" y="1047"/>
         </scene>
     </scenes>
     <resources>
