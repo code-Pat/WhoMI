@@ -13,6 +13,7 @@ struct QRCodeViewController: View {
         VStack {
             
             QRCodeView()
+            Text("")
             Text("프로필 공유를 위해 위 QR코드를 이용하세요")
         }
     }

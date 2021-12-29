@@ -25,7 +25,7 @@ struct QRCodeView: View {
     
     func generateQRCodeImage() -> UIImage {
         if let userAuth = userAuth {
-            let data = userAuth.uid
+            let data = userAuth.uid.data(using: .ascii)
             filter.setValue(data, forKey: "inputMessage")
         }
         if let qrCodeImage = filter.outputImage {
