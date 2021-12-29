@@ -29,6 +29,7 @@
 		6B8AE748277AF31600F0DCA9 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AE747277AF31600F0DCA9 /* QRCodeViewController.swift */; };
 		6B8AE74A277AF42100F0DCA9 /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AE749277AF42100F0DCA9 /* QRCodeView.swift */; };
 		6B8AE750277C882100F0DCA9 /* QRScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8AE74F277C882100F0DCA9 /* QRScannerView.swift */; };
+		6B8AE756277C8AA300F0DCA9 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = 6B8AE755277C8AA300F0DCA9 /* CodeScanner */; };
 		6BC50A7C27551FF900641598 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC50A7B27551FF900641598 /* UIColor+Extension.swift */; };
 		6BC50A7E27552BF400641598 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC50A7D27552BF400641598 /* CALayer+Extension.swift */; };
 		6BF9EBCC27476E7C00629858 /* EntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF9EBCB27476E7C00629858 /* EntryViewController.swift */; };
@@ -79,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B8AE756277C8AA300F0DCA9 /* CodeScanner in Frameworks */,
 				F47801C8F7F7446D7A3B958B /* Pods_WhoMI_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +241,9 @@
 			dependencies = (
 			);
 			name = WhoMI_Demo;
+			packageProductDependencies = (
+				6B8AE755277C8AA300F0DCA9 /* CodeScanner */,
+			);
 			productName = WhoMI_Demo;
 			productReference = 6B7739F027429A3E0048B511 /* WhoMI_Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -267,6 +272,9 @@
 				Base,
 			);
 			mainGroup = 6B7739E727429A3D0048B511;
+			packageReferences = (
+				6B8AE754277C8AA300F0DCA9 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
 			productRefGroup = 6B7739F127429A3E0048B511 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -592,6 +600,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6B8AE754277C8AA300F0DCA9 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6B8AE755277C8AA300F0DCA9 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6B8AE754277C8AA300F0DCA9 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6B7739E827429A3D0048B511 /* Project object */;
 }
