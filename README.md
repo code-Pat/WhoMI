@@ -17,6 +17,7 @@
 * [Firebase] FireStore을 이용해 유저 데이터 클라우드 저장 구현
 * [Firebase] Storage를 이용해 유저 프로필 사진/이미지 클라우드 저장 구현
 * [IQKeyboardManager] textfields 입력 시 자동으로 키보드와 뷰의 높이 계산 및 키보드 가림 문제 해결
+* [CodeScanner] QR코드 Scanner 구현을 위해 이용
 
 
 ## 프로젝트 계획
@@ -382,3 +383,9 @@
 * QRCode관련한 코드들이 SwiftUI의 CoreImage 를 이용해 구현되었고, UIKit으로 만들어진 PersonalProfileViewController에서 해당 QR뷰로 넘어가기 위해서 UIHostingController를 이용하였다. UIKit버전에서 SwiftUI코드 뷰로 화면전환이 생길 때 UIHostingController를 이용하면 매우 용이하게 전환될 수 있다
 * [SwiftUI] QRCodeScanner: Home 화면 상단에 친구추가 버튼 추가 및 버튼 클릭시 카메라창이 present 방식으로 화면 전환되어 QR코드를 스캔할 수 있게해줌
 
+---
+
+#### **21.12.30(목)**
+*version 1.1.1*
+
+* [CodeScanner]을 이용해 QR scanner 구현 (테스트 결과: 인식속도 매우 빠름)

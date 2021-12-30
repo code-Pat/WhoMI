@@ -11,6 +11,7 @@ import CodeScanner
 struct QRScannerView: View {
     @State var isPresentingScanner = true
     @State var scannedCode: String = "상대방의 QR을 스캔해주세요"
+    @Environment(\.presentationMode) var presentationMode
     
     var scannerSheet: some View {
         CodeScannerView(codeTypes: [.qr]) { response in
@@ -23,12 +24,21 @@ struct QRScannerView: View {
     
     var body: some View {
         VStack(spacing: 10) {
-            Text(scannedCode)
+            Text("친구 추가가 완료되었습니다!")
             
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Image(systemName: "xmark")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .padding(20)
+            }
             .sheet(isPresented: $isPresentingScanner) {
                 self.scannerSheet
             }
         }
+        
     }
 }
 
