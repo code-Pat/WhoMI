@@ -33,9 +33,9 @@ struct QRScannerView: View {
     
     var body: some View {
         VStack(spacing: 10) {
-            Text("친구 추가가 완료되었습니다!")
+            Text("QR 스캔을 통해 친구를 추가하고 프로필을 공유해보세요!")
             
-            Button(("친구 추가를 하시겠습니다?"), action: {
+            Button(("친구 추가를 하시겠습니까?"), action: {
                 addFriend()
                 self.presentationMode.wrappedValue.dismiss()
             })
@@ -52,13 +52,14 @@ struct QRScannerView: View {
             let docRef = db.collection("\(userAuth.uid)").document("friends")
             
             let friend: [String: Any] = ["friend": String(scannedCode)]
-            docRef.setData(friend) { err in
-                if let err = err {
-                    print("Error writing document: \(err)")
-                } else {
-                    print("Document successfully written")
-                }
-            }
+//            docRef.setData(friend) { err in
+//                if let err = err {
+//                    print("Error writing document: \(err)")
+//                } else {
+//                    print("Document successfully written")
+//                }
+//            }
+            
         }
     }
 }

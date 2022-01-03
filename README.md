@@ -389,3 +389,12 @@
 *version 1.1.1*
 
 * [CodeScanner]을 이용해 QR scanner 구현 (테스트 결과: 인식속도 매우 빠름)
+* QRScannerView 화면 구현 방식 변경 -> 스캔 인식 후 친구 추가 버튼 클릭시 Home화면에 친구 추가 되면서 scanner 화면은 사라짐
+
+---
+
+#### **22.01.03(월)**
+*version 1.1.1*
+
+* Mobile Test: QR인식 성공 및 firestore에 상대 프로필 uid추가 성공 -> QR generator, scanner, firestore 모두 구현 완료. 
+* 이슈: Firestore 상에 유저의 콜렉션에 Friends라는 document 생성 후 friend: uid 형식의 필드값을 줬는데, 현재는 새로운 qr코드를 인식하면 기존 friend가 새로운 uid값으로 갱신되는 형식으로 저장이 됨 -> 개선 방안: 1) Friends document안에 friend: [uid1, uid2, uid3, ...] 형식의 배열값으로 친구 목록 저장, 혹은 2) 같은 document 안에 friend: uid1, friend: uid2, friend: uid3, ... 형식으로 하나의 friend에 하나의 uid 배정. 어떤 방식이 더 효율적이고 crud관리가 쉬울지 고민중...
